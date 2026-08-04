@@ -1,0 +1,18 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+data/**
+!data/**/
+!data/**/*.gitkeep
+output/**
+!output/**/
+!output/**/*.gitkeep
+renv/library/
+renv/staging/
+# OS generated iles
+.DS_Store
+.ssh/
+# Docker
+docker/*.log
+.docker-temp/
