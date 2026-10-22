@@ -7,6 +7,51 @@
 
 # FLAGS
 
+# 2026-10-22
+
+There are several reasons for the reproducibility or replicability crisis in science. These include 
+
+Systemic
+incentives (Smaldino and McElreath 2016 model the “natural selection of bad science”; Nosek, Spies and Motyl 2012), publication bias and the file-drawer problem
+perverse incentives around publication, hiring, and promotion practices; 
+
+Design
+low power (Button et al. 2013; Cohen 1962 shows this is not new), unconstrained flexibility
+poor study design where studies have low power, and researcher degrees of freedom (choices) are unconstrained; 
+
+Analytic
+p-hacking, HARKing, the garden of forking paths (Gelman and Loken 2013), “many analysts” results (Silberzahn et al. 2018, where 29 teams analysing one dataset gave a spread of conclusions)
+Cite the specific misuse of p-values (ASA statement, Wasserstein and Lazar 2016), and note debates over remedies: lowering α to .005 (Benjamin et al. 2018) versus justifying α (Lakens et al. 2018) versus abandoning thresholds (McShane et al. 2019).
+poor statistical practice and inference including p-hacking, HARKing, and conflation of exploration with confirmation; 
+
+Cognitive
+confirmation bias, motivated reasoning
+“Hypothesis myopia” is from Nuzzo/Nosek commentary and is not a standard term. Cite it, or replace it with “motivated reasoning” or “confirmation bias” with Nickerson (1998) or Munafò et al. (2017) “A manifesto for reproducible science.”
+psychology of researchers around self-deception, hypothesis myopia, and confirmation bias; 
+
+Transparency and infrastructure
+where code, data and software environments sit
+and methodological opacity where data, methods, analytical code, or reagents are not sufficiently or transparently documented or available. 
+
+Missing causes: publication bias, questionable research practices prevalence (John, Loewenstein and Prelec 2012), fraud (a minority cause, worth stating explicitly), measurement problems and construct validity, and heterogeneity or hidden moderators (a non-replication isn’t always an error).
+
+“Reagents” signals life sciences, but your examples are largely psychological. Say which fields you mean, or acknowledge field-specific causes (cell line misidentification, antibody validity).
+
+“Methodological opacity” is the cause most relevant to you. Expand it: undocumented analysis decisions, point-and-click workflows, spreadsheet errors (Ziemann et al. 2016 found gene name corruption in a large share of papers), unreported software versions and dependencies, and “available on request” data that is rarely provided (Wicherts et al. 2006; Gabelica et al. 2022).
+
+Causal interactions: incentives drive flexibility, which drives false positives, which publication bias then amplifies. Show the mechanism rather than a list.
+
+Remedies mapped to causes: registered reports and preregistration (Nosek et al. 2018; Chambers), power analysis, data and code sharing, multiverse analysis (Steegen et al. 2016), reform of incentives (TOP guidelines, Nosek et al. 2015). Note evidence on whether remedies work (e.g., preregistration adherence is imperfect, per Claesen et al. 2021).
+
+Where code fits honestly: R scripts, R Markdown/Quarto, version control, renv/containers, and targets-style pipelines address computational reproducibility and analytic transparency. They do not fix low power, bad theory, or incentives, and code can make a flawed analysis perfectly reproducible. Also note that code itself is error-prone and needs review and testing.
+
+
+Computational reproducibility specifically: Hardwicke et al. (2018, 2021), Stodden et al. (2018) on Science’s data policy, and Trisovic et al. (2022), who found most R scripts in Harvard Dataverse failed to run without errors
+
+Baker (2016), Nature survey: over 70% of researchers had failed to reproduce another’s work
+
+failing to replicate does not by itself mean the original was false.
+
 # 2026-10-21
 
 There are several reasons for the reproducibility or replicability crisis in science. These include perverse incentives around publication, hiring, and promotion practices; poor study design where studies have low power, and researcher degrees of freedom (choices) are unconstrained; psychology of researchers around self-deception, hypothesis myopia, and confirmation bias; poor statistical practice and inference including p-hacking, HARKing, and conflation of exploration with confirmation; and methodological opacity where data, methods, analytical code, or reagents are not sufficiently or transparently documented or available. 
