@@ -7,6 +7,37 @@
 
 # FLAGS
 
+# 2026-10-21
+
+There are several reasons for the reproducibility or replicability crisis in science. These include perverse incentives around publication, hiring, and promotion practices; poor study design where studies have low power, and researcher degrees of freedom (choices) are unconstrained; psychology of researchers around self-deception, hypothesis myopia, and confirmation bias; poor statistical practice and inference including p-hacking, HARKing, and conflation of exploration with confirmation; and methodological opacity where data, methods, analytical code, or reagents are not sufficiently or transparently documented or available. 
+
+- missing terms
+  - repeatability (same researcher, short space of time - internal precision)
+  - Reusability (portability) - is my work structured cleanly enough that someone else can build on top of it - documentation and design
+  - Reliability - overall consistency - is our testing apparatus or code consistently free from random measurement errors
+  - internal validity - conceptual - causal accuracy - are we certain that x caused y or did an outside factor interfere
+  - construct validity - conceptual - does our practical experiment actually map onto the theoretical idea we are studying
+
+
+3. Structural "Credibility Indicators" in Modern Science
+
+Because assessing this entire spectrum manually is incredibly difficult, metascience has developed shorthand indicators—often called Credibility Revolution initiatives—to signal that a paper has respected the matrix:
+• Pre-registration: Registering the hypotheses and analysis plan before data collection. This ensures internal validity by preventing researchers from changing their stories after seeing the results.
+• Open Science Badges: Visual badges on papers for "Open Data" and "Open Materials" that guarantee immediate reproducibility and reusability.
+• Registered Reports: A publishing format where a journal agrees to publish a study before the results are known, purely based on the rigour of its methodology. This eliminates publication bias and dramatically increases the credibility of the literature.
+
+
+
+- Google spreadsheet with audience responses and other data: https://docs.google.com/spreadsheets/d/1KmkVZbqQi645h3KcF7YbfGjo1xLEL4uIVEvt5u-E86k/edit?resourcekey=&gid=1283318485#gid=1283318485
+
+- Nosek et al 2022 - Replicability, Robustness, and Reproducibility in Psychological Science
+- https://www.annualreviews.org/docserver/fulltext/psych/73/1/annurev-psych-020821-114157.pdf?expires=1792482421&id=id&accname=ar-246440&checksum=2C9334B122951CEAB00174D586CF5D8A
+
+- Fabrigar et al 2020 - A validity-based framework for understanding replication in psychology
+- https://richardepetty.com/wp-content/uploads/2020/11/2020-pspr-fabrigar-wegener-petty-validities-framework.pdf
+
+
+
 # 2026-10-20
 
 - Google form responses - published to the web:
@@ -16,129 +47,6 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vRl5tqiZveofYdRG4UKR--v1oE4QNKPQ
 
 Responder's link to the form.
 https://docs.google.com/forms/d/e/1FAIpQLScoCB8qP_F7_PQibXlbrCcta610dhzCR0mNN62F40K2f-iTGQ/viewform?usp=publish-editor
-
-<script src="gauge-animation.js"></script>
-<script src="gauge-from-form.js"></script>
-
-```{r}
-#| label: radial-percentage-chart
-#| echo: false
-#| message: false
-#| warning: false
-
-library(echarts4r)
-
-e_charts(elementId = "plotCompletion") |> 
-  e_gauge(
-    value = 0, 
-    name = "You",
-    min = 0,
-    max = 100,
-    startAngle = 90,
-    endAngle = -270,
-    # Customize the ring track layout
-    progress = list(show = TRUE, width = 32, itemStyle = list(color = "#2b6cb0")), 
-    axisLine = list(lineStyle = list(width = 32, color = list(list(1, "#e2e8f0")))),
-    # Hide traditional dial elements to make it a clean ring
-    pointer = list(show = FALSE), 
-    axisTick = list(show = FALSE),
-    splitLine = list(show = FALSE),
-    axisLabel = list(show = FALSE),
-    title = list(
-      show = TRUE,
-      fontSize = 40,
-      fontWeight = "bold",
-      color = "#4a5568",
-      offsetCenter = list(0, "15%")  # Shifts the label down below the center
-    ),
-    # Center typography
-    detail = list(
-      valueAnimation = TRUE, 
-      formatter = "{value}%", 
-      offsetCenter = list(0, "-15%"),
-      fontSize = 50
-    ),
-    animation = TRUE
-  )
-
-```
-
-```{=html}
-<p id="gauge-caption" style="text-align:center; font-size:1.5em; color:#4a5568;"></p>
-```
-
-          
-          <script>
-          // Helper math functions for median and IQR
-          function getMedian(arr) {
-            if (arr.length === 0) return 0;
-            const sorted = [...arr].sort((a, b) => a - b);
-            const mid = Math.floor(sorted.length / 2);
-            return sorted.length % 2 !== 0 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2);
-          }
-
-          function getPercentile(arr, p) {
-            if (arr.length === 0) return 0;
-            const sorted = [...arr].sort((a, b) => a - b);
-            const pos = (sorted.length - 1) * p;
-            const base = Math.floor(pos);
-            const rest = pos - base;
-            return Math.round(sorted[base + 1] !== undefined ? sorted[base] + rest * (sorted[base + 1] - sorted[base]) : sorted[base]);
-          }
-
-          // Fetch live data and update chart
-          async function updateLiveGauge() {
-            const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRl5tqiZveofYdRG4UKR--v1oE4QNKPQrfDRSsYNaEu5S56f4xkEIwyPXjMaCCtQZJQWrD1W8zzvsKI/pub?gid=2097952417&single=true&output=csv";
-            
-            try {
-              const response = await fetch(csvUrl);
-              const data = await response.text();
-              
-              // Parse CSV rows (assuming timestamp is col 1, guess is col 2)
-              const rows = data.split("\n").slice(1); // skip header
-              let guesses = [];
-              rows.forEach(row => {
-                const cols = row.split(",");
-                if (cols.length >= 2) {
-                  let val = parseFloat(cols[1]); // Adjust index based on your form columns
-                  if (!isNaN(val)) guesses.push(val);
-                }
-              });
-
-              if (guesses.length === 0) return;
-
-              const medVal = getMedian(guesses);
-              const q25 = getPercentile(guesses, 0.25);
-              const q75 = getPercentile(guesses, 0.75);
-
-              // Target the ECharts instance
-              const ec = document.getElementById('plotCompletion');
-              if (!ec) return;
-              const chart = echarts.getInstanceByDom(ec);
-              if (!chart) return;
-
-              // Update chart options dynamically with live stats
-              chart.setOption({
-                series: [{
-                  data: [{ value: medVal, name: `Audience Median (IQR: ${q25}%–${q75}%)` }]
-                }]
-              }, false);
-
-            } catch (error) {
-              console.error("Error fetching live audience data:", error);
-            }
-          }
-
-          // Trigger update when navigating to the target slide
-          document.addEventListener('DOMContentLoaded', function () {
-            if (typeof Reveal !== 'undefined') {
-              Reveal.on('slidechanged', function (event) {
-                if (event.currentSlide.id !== 'a-crisis-in-science') return;
-                updateLiveGauge();
-              });
-            }
-          });
-          </script>
 
 - reproducibility metrics from NASEM (2019)
 - Bayer - only reproduced 20 to 25% of published data (Prinz et al 2011)
