@@ -178,48 +178,123 @@ function applyStats(id) {
 }
 
 // ---------- slide lifecycle ----------
-function stopPolling() { clearInterval(pollTimer); pollTimer = null; }
 
-function startPolling(ids, myRun) {
-  stopPolling();
+function stopPolling() {
+  clearInterval(pollTimer);
+  pollTimer = null;
+}
+
+let activeIds = new Set();
+let currentSlide = null;
+
+function startPolling(myRun) {
+  if (pollTimer) return;
+
   const tick = async () => {
     await refreshStats();
-    if (myRun === runId) ids.forEach(applyStats);
+    if (myRun === runId) {
+      activeIds.forEach(applyStats);
+    }
   };
+
   tick();
   pollTimer = setInterval(tick, POLL_MS);
 }
 
-async function enterSlide(slide) {
-  const ids = gaugesOnSlide(slide);
-  if (!ids.length) return leaveSlide();
+async function activateGauge(id, myRun) {
+  await refreshStats();
 
-  const myRun = ++runId;
-  const haveAll = ids.every(id => statsById[id]);
-  await Promise.all([sleep(100), haveAll ? null : withTimeout(refreshStats(), 4000)]);
+  if (myRun !== runId || !currentSlide) return;
+
+  // Allow the fragment visibility/layout to settle
+  await sleep(100);
+  
+  const fragment = document.getElementById(id)?.closest('[data-gauge]');
+  if (fragment && !fragment.classList.contains('visible')) return;
+
   if (myRun !== runId) return;
 
-  ids.forEach(replay);
-  startPolling(ids, myRun);
+  replay(id);
+  activeIds.add(id);
+
+  startPolling(myRun);
 }
 
-function leaveSlide() { runId++; stopPolling(); }
+async function enterSlide(slide) {
+  const myRun = ++runId;
+
+  stopPolling();
+  activeIds.clear();
+  currentSlide = slide;
+
+  const ids = gaugesOnSlide(slide);
+
+  if (!ids.length) {
+    currentSlide = null;
+    return;
+  }
+
+  // Identify gauges that are not controlled by fragments,
+  // or whose fragments are already visible.
+  const initiallyVisible = ids.filter(id => {
+    const el = document.getElementById(id);
+    const fragment = el.closest('[data-gauge]');
+
+    return !fragment || fragment.classList.contains('visible');
+  });
+
+  if (!initiallyVisible.length) return;
+
+  await Promise.all([
+    sleep(100),
+    refreshStats()
+  ]);
+
+  if (myRun !== runId) return;
+
+  initiallyVisible.forEach(id => {
+    replay(id);
+    activeIds.add(id);
+  });
+
+  startPolling(myRun);
+}
+
+function leaveSlide() {
+  runId++;
+  activeIds.clear();
+  currentSlide = null;
+  stopPolling();
+}
 
 // ---------- Reveal hooks ----------
+
 window.addEventListener('load', function () {
   if (typeof Reveal === 'undefined') return;
-  refreshStats();                                    // prefetch everything once
 
-  const handler = e => e.currentSlide && enterSlide(e.currentSlide);
-  Reveal.on('slidechanged', handler);
-  Reveal.on('ready', handler);
-  if (Reveal.isReady && Reveal.isReady()) handler({ currentSlide: Reveal.getCurrentSlide() });
-});
+  refreshStats();
 
-Reveal.on('fragmentshown', event => {
-  const gaugeId = event.fragment.dataset.gauge;
+  Reveal.on('slidechanged', e => {
+    enterSlide(e.currentSlide);
+  });
 
-  if (gaugeId) {
-    startGaugeAnimation(gaugeId);
-  }
+  Reveal.on('ready', e => {
+    enterSlide(e.currentSlide);
+  });
+
+  Reveal.on('fragmentshown', event => {
+    const id = event.fragment.dataset.gauge;
+
+    if (id && GAUGES[id] && currentSlide) {
+      activateGauge(id, runId);
+    }
+  });
+
+  Reveal.on('fragmenthidden', event => {
+    const id = event.fragment.dataset.gauge;
+
+    if (id) {
+      activeIds.delete(id);
+    }
+  });
 });
