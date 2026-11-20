@@ -283,18 +283,24 @@ window.addEventListener('load', function () {
   });
 
   Reveal.on('fragmentshown', event => {
-    const id = event.fragment.dataset.gauge;
+    const raw = event.fragment.dataset.gauge;
+    if (!raw || !currentSlide) return;
 
-    if (id && GAUGES[id] && currentSlide) {
-      activateGauge(id, runId);
-    }
+    const ids = raw.split(',').map(s => s.trim()).filter(Boolean);
+    ids.forEach(id => {
+      if (GAUGES[id]) {
+        activateGauge(id, runId);
+      }
+    });
   });
 
   Reveal.on('fragmenthidden', event => {
-    const id = event.fragment.dataset.gauge;
+    const raw = event.fragment.dataset.gauge;
+    if (!raw) return;
 
-    if (id) {
+    const ids = raw.split(',').map(s => s.trim()).filter(Boolean);
+    ids.forEach(id => {
       activeIds.delete(id);
-    }
+    });
   });
 });
