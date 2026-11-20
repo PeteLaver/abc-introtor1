@@ -513,7 +513,7 @@ African Brain Child | Neurosciences Institute | UCT
 :::: {.columns}
 
 ::: {.column width="25%"}
-::: {.fragment data-gauge="plotCobey2023health"}
+::: {.fragment data-fragment-index="1" data-gauge="plotCobey2023health"}
 ```{r}
 live_gauge("plotCobey2023health")
 ```
@@ -521,7 +521,7 @@ live_gauge("plotCobey2023health")
 :::
 
 ::: {.column width="25%"}
-::: {.fragment data-gauge="plotCobey2023economics"}
+::: {.fragment data-fragment-index="2" data-gauge="plotCobey2023economics"}
 ```{r}
 live_gauge("plotCobey2023economics")
 ```
@@ -529,7 +529,7 @@ live_gauge("plotCobey2023economics")
 :::
 
 ::: {.column width="25%"}
-::: {.fragment data-gauge="plotCobey2023biomedicine"}
+::: {.fragment data-fragment-index="3" data-gauge="plotCobey2023biomedicine"}
 ```{r}
 live_gauge("plotCobey2023biomedicine")
 ```
@@ -537,7 +537,7 @@ live_gauge("plotCobey2023biomedicine")
 :::
 
 ::: {.column width="25%"}
-::: {.fragment data-gauge="plotCobey2023education"}
+::: {.fragment data-fragment-index="4" data-gauge="plotCobey2023education"}
 ```{r}
 live_gauge("plotCobey2023education")
 ```
