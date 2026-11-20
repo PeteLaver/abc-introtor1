@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R"
+title: "Introduction to R: Why code?"
 subtitle: "ABC Research Meeting 2026, Cape Town"
 author: "Pete Laver"
 date: today
@@ -104,6 +104,9 @@ Now, raise your hand if you've tried to recreate the results or workflow from so
 Does anyone want to share briefly about that?
 :::
 
+
+
+
 ## Scientific credibility
 
 <br>
@@ -160,6 +163,8 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+
+
 ## Ideal replication / reproduction rate?
 
 <br>
@@ -181,6 +186,7 @@ These are your speaker notes. They will be hidden during the presentation but wi
 ::: footer
 African Brain Child | Neurosciences Institute | UCT
 :::
+
 
 
 
@@ -366,6 +372,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+
 ## Replicability, oncology drug target studies
 
 67 projects<br>
@@ -412,6 +419,7 @@ Prinz, F., Schlange, T. & Asadullah, K. Believe it or not: how much can we rely 
 ::: footer
 African Brain Child | Neurosciences Institute | UCT
 :::
+
 
 
 
@@ -504,9 +512,11 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+
+
 ## Replicability, other fields
 
-47 papers, scoping review<br>
+47 papers, scoping review (health sciences, economics, biomedicine, education)<br>
 <b>Mixed data</b> (20% re-analysis, ~80% some new trials)<br>
 <b>Mixed code</b> (some re-analysis, some adapted protocols)
 
@@ -544,10 +554,7 @@ live_gauge("plotCobey2023education")
 ```
 :::
 :::
-
 ::::
-
-
 
 
 ::: {.reference-container}
@@ -574,12 +581,435 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+## What is the problem?
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- ...
+:::
+::: {.fragment}
+- ...
+:::
+::: {.fragment}
+- ...
+:::
+:::
+:::
+:::
+
+::: {.notes}
+Science has a replication, reproduction, etc problem. Part of that problem (though not all of it) is because there isn't a record of what analyses were done and how they were done. There is no audit trail, and it is not transparent or open access.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## What can we do?
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- ...
+:::
+::: {.fragment}
+- ...
+:::
+::: {.fragment}
+- ...
+:::
+:::
+:::
+:::
+
+::: {.notes}
+.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Why code?
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- Be kind the 'future you'
+:::
+::: {.fragment}
+- Open science. Transparency
+:::
+::: {.fragment}
+- Scalability
+:::
+::: {.fragment}
+- Collaboration
+:::
+::: {.fragment}
+- Automation
+:::
+::: {.fragment}
+- Some problems specific to point-and-click workflows
+:::
+:::
+:::
+:::
+
+::: {.notes}
+One part of the solution is have analysis be conducted using code which is stored, shared, version controlled, and correctly annotated.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Gene name errors
+
+:::: {.columns}
+
+::: {.column width="33%"}
+::: {.fragment}
+![](images/sept1_gene.png)
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+![](images/sept1_date.png)
+:::
+:::
+
+::: {.column width="33%"}
+::: {.fragment}
+![](images/bruford_et_al_2020.png)
+:::
+:::
+
+::::
+
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+- Ziemann, M., Eren, Y., & El-Osta, A. (2016). Gene name errors are widespread in the scientific literature. <em><b>Genome biology, 17</b></em>(1), 177. https://doi.org/10.1186/s13059-016-1044-7
+- Abeysooriya, M., Soria, M., Kasu, M. S., & Ziemann, M. (2021). Gene name errors: Lessons not learned. <em><b>PLoS computational biology, 17</b></em>(7), e1008984. https://doi.org/10.1371/journal.pcbi.1008984
+- Bruford, E.A., Braschi, B., Denny, P. <em>et al</em>. Guidelines for human gene nomenclature. <em><b>Nat Genet 52</b></em>, 754–758 (2020). https://doi.org/10.1038/s41588-020-0669-3
+:::
+:::
+
+
+::: {.notes}
+Human Genome Organization (HUGO). HUGO Gene Nomenclature Committee (HGNC). Changed 
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## COVID and NHS contact tracing
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- CSV file conversion
+:::
+::: {.fragment}
+- ~16,000 positive COVID cases missed
+:::
+::: {.fragment}
+- Contact tracing for ~50,000 people delayed
+:::
+::: {.fragment}
+- Transmission believed to be flat
+:::
+:::
+:::
+:::
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Economics and austerity measures
+
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+- Carmen M. Reinhart & Kenneth S. Rogoff, 2010. Growth in a Time of Debt, <em><b>American Economic Review 100</b></em>(2), p. 573-578
+- Herndon, Thomas, Ash, Michael and Pollin, Robert, (2014), Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff, <em><b>Cambridge Journal of Economics, 38</b></em>, issue 2, p. 257-279
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Economics and austerity measures 2
+
+::: {.fullimage-container}
+::: {.fragment}
+![](images/rr_error.png)
+:::
+:::
+
+
+::: {.notes}
+5 out of 20 selected countries were ommited when using the AVERAGE function (Australia, Austria, Belgium, Canada, and Denmark). The rest were Finland, France, Germany, Greece, Ireland, Italy, Japan,
+Netherlands, New Zealand, Norway, Portugal, Spain, Sweden, the United Kingdom, and the United States.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+
+
+## Why NOT code?
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- Investment of time
+:::
+::: {.fragment}
+- Dedicated workflows and infrastructure
+:::
+::: {.fragment}
+- Collaborators use Excel or SPSS
+:::
+:::
+:::
+:::
+
+::: {.notes}
+There are legitimate reasons that prevent people from learning to code or adopting the general practice.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+## What can code not fix?
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- Poor study design
+:::
+::: {.fragment}
+- Poor data
+:::
+::: {.fragment}
+- Unshared data
+:::
+::: {.fragment}
+- Wrong code
+:::
+:::
+:::
+:::
+
+::: {.notes}
+There are legitimate reasons that prevent people from learning to code or adopting the general practice.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Why R?
+
+<br>
+<br>
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- Just 1 of many options. In many cases, R isn't the best
+:::
+::: {.fragment}
+- Documentation
+:::
+::: {.fragment}
+- Many peer-reviewed packages and functions
+:::
+::: {.fragment}
+- Open-source
+:::
+::: {.fragment}
+- Community and support
+:::
+::: {.fragment}
+- What is the norm in your field?
+:::
+:::
+:::
+:::
+
+::: {.notes}
+R is one of many options for data analysis. Globally, python is more popular, particularly with people who have a computer science background or who are doing machine learning. R is more popular in academic circles (though python is catching up). Other options like Julia and Matlab are more niche but may be the best options for a specific application. R is particularly good because many of the functions, packages, and algorithms available have associated peer reviewed publications. The code is also open source, so one can verify internals if one wants to. All packages have documentation. There is a wide base of community support and some commercial support (like Posit). R is also particularly good for research-grade graphics.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+## R as part of an ecosystem?
+
+...
+
+::: {.notes}
+R fits well into a broader ecosystem whereby analysis code (R) sits alongside presentation code (LaTeX, Quarto, md, etc) so that code, output, text, figures all sit within a single document that can produce reports, journal articles, presentations, web pages, and several other output formats.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Next steps
+
+...
+
+::: {.notes}
+.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+
 
 ## Normal Slide Title
 
-Your regular content goes here...
-
-
+...
 
 ::: {.notes}
 These are your speaker notes. They will be hidden during the presentation but will appear in the rendered HTML notes document and when pressing `S` in the reveal.js presentation.

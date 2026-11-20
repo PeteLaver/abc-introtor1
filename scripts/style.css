@@ -139,6 +139,16 @@
   font-size: 1.1em;
 }
 
+.fullimage-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  min-height: 100vh;        /* Takes up most of the slide height */
+  width: 100%;
+}
+
 .center-container {
   display: flex;
   flex-direction: row;
