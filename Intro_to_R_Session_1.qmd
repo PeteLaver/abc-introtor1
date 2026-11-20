@@ -10,8 +10,8 @@ format:
     height: 1080
     minScale: 0.5
     maxScale: 1.5
-    output-file: ABC_2026_Laver.html
-    theme: [default, theme.scss]
+    output-file: index.html
+    theme: [default, scripts/theme.scss]
     title-slide-attributes:
       data-background-image: "images/image4.png"
       data-background-size: "contain"
@@ -30,11 +30,11 @@ format:
       presentingCursor: "default"
       spotlightCursor: "none"
       spotlightOnKeyPressAndHold: 73
-    css: style.css
+    css: scripts/style.css
     include-in-header:
       - text: |
-          <script src="funder-logos.js"></script>
-          <script src="gauge-from-form-automated.js"></script>
+          <script src="scripts/funder-logos.js"></script>
+          <script src="scripts/gauge-from-form-automated.js"></script>
           
   html:
     output-file: ABC_2026_Laver_notes.html
@@ -42,12 +42,12 @@ format:
     number-sections: true
     embed-resources: true
     fig-align: center
-    css: notes-style.css
+    css: scripts/notes-style.css
 revealjs-plugins:
   - spotlight
   - zoomit-ish
 
-bibliography: references.bib
+bibliography: R/references.bib
 
 execute:
   echo: false
@@ -57,7 +57,7 @@ execute:
 
 ```{r}
 #| include: false
-source("gauge.R")
+source("R/gauge.R")
 ```
 
 
