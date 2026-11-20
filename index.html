@@ -3113,6 +3113,7 @@ window.addEventListener('load', function () {
   });
 
   Reveal.on('fragmentshown', event => {
+    console.log('SHOWN:', event.fragment.dataset.gauge, 'currentSlide:', currentSlide?.id || currentSlide);
     const raw = event.fragment.dataset.gauge;
     if (!raw || !currentSlide) return;
 
