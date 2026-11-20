@@ -149,6 +149,18 @@
   width: 100%;
 }
 
+.reference-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+}
+
 .reference-card {
   flex: 0 1 800px;
   padding: 1.25rem;

@@ -339,7 +339,7 @@ live_gauge("plotIoannidis2009you")
 
 
 
-::: {.center-container}
+::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
@@ -386,7 +386,7 @@ live_gauge("plotPrinz2011you")
 ::::
 
 
-::: {.center-container}
+::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
@@ -433,7 +433,7 @@ live_gauge("plotBegley2012you")
 ::::
 
 
-::: {.center-container}
+::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
@@ -468,7 +468,7 @@ African Brain Child | Neurosciences Institute | UCT
 live_gauge("plotOSC2015")
 ```
 
-::: {.center-container}
+::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
@@ -526,7 +526,7 @@ live_gauge("plotCobey2023education")
 ::::
 
 
-::: {.center-container}
+::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
