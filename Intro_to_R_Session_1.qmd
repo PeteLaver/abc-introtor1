@@ -333,7 +333,7 @@ live_gauge("plotIoannidis2009")
 
 
 ::: {.column width="50%"}
-::: {.fragment data-fragment-index="1" data-gauge="plotIoannidis2009you"}
+::: {.fragment data-fragment-index="2" data-gauge="plotIoannidis2009you"}
 ```{r}
 live_gauge("plotIoannidis2009you")
 ```
