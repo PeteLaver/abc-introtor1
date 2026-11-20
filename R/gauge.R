@@ -2,7 +2,7 @@
 library(echarts4r)
 
 live_gauge <- function(id, value = 0, name = "You", color = "#c45426", 
-                       height = "480px") {
+                       height = "450px") {
   e_charts(elementId = id, width = "100%", height = height) |>
     e_gauge(
       value = value, name = name, min = 0, max = 100,
