@@ -323,15 +323,17 @@ African Brain Child | Neurosciences Institute | UCT
 
 :::: {.columns}
 
-::: {.fragment}
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="1" data-gauge="plotIoannidis2009"}
 ```{r}
 live_gauge("plotIoannidis2009")
 ```
 :::
+:::
 
 
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="1" data-gauge="plotIoannidis2009you"}
 ```{r}
 live_gauge("plotIoannidis2009you")
 ```
@@ -339,8 +341,6 @@ live_gauge("plotIoannidis2009you")
 :::
 
 ::::
-
-
 
 ::: {.reference-container}
 ::: {.icon-wrapper}

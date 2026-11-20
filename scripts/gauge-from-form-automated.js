@@ -215,3 +215,11 @@ window.addEventListener('load', function () {
   Reveal.on('ready', handler);
   if (Reveal.isReady && Reveal.isReady()) handler({ currentSlide: Reveal.getCurrentSlide() });
 });
+
+Reveal.on('fragmentshown', event => {
+  const gaugeId = event.fragment.dataset.gauge;
+
+  if (gaugeId) {
+    startGaugeAnimation(gaugeId);
+  }
+});
