@@ -375,15 +375,19 @@ African Brain Child | Neurosciences Institute | UCT
 :::: {.columns}
 
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="1" data-gauge="plotPrinz2011"}
 ```{r}
 live_gauge("plotPrinz2011")
 ```
 :::
+:::
 
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="2" data-gauge="plotPrinz2011you"}
 ```{r}
 live_gauge("plotPrinz2011you")
 ```
+:::
 :::
 
 ::::
@@ -422,15 +426,19 @@ African Brain Child | Neurosciences Institute | UCT
 :::: {.columns}
 
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="1" data-gauge="plotBegley2012"}
 ```{r}
 live_gauge("plotBegley2012")
 ```
 :::
+:::
 
 ::: {.column width="50%"}
+::: {.fragment data-fragment-index="2" data-gauge="plotBegley2012you"}
 ```{r}
 live_gauge("plotBegley2012you")
 ```
+:::
 :::
 
 ::::
@@ -467,9 +475,11 @@ African Brain Child | Neurosciences Institute | UCT
 <b>New data</b> (new participants)<br>
 <b>Same code</b> (original materials and protocols)
 
+::: {.fragment data-fragment-index="1" data-gauge="plotOSC2015"}
 ```{r}
 live_gauge("plotOSC2015")
 ```
+:::
 
 ::: {.reference-container}
 ::: {.icon-wrapper}
@@ -500,6 +510,7 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Mixed data</b> (20% re-analysis, ~80% some new trials)<br>
 <b>Mixed code</b> (some re-analysis, some adapted protocols)
 
+::: {.fragment data-fragment-index="1" data-gauge="plotCobey2023health, plotCobey2023economics, plotCobey2023biomedicine, plotCobey2023education"}
 :::: {.columns}
 
 ::: {.column width="25%"}
@@ -527,6 +538,7 @@ live_gauge("plotCobey2023education")
 :::
 
 ::::
+:::
 
 
 ::: {.reference-container}
