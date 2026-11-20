@@ -1,0 +1,18 @@
+
+.square-plot {
+  width: min(60vw, 600px);
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square-plot .html-widget,
+.square-plot .plotly,
+.square-plot .plot-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+

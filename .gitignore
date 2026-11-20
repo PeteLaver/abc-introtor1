@@ -5,9 +5,6 @@
 data/**
 !data/**/
 !data/**/*.gitkeep
-output/**
-!output/**/
-!output/**/*.gitkeep
 renv/library/
 renv/staging/
 # OS generated iles

@@ -1,0 +1,582 @@
+---
+title: "Introduction to R"
+subtitle: "ABC Research Meeting 2026, Cape Town"
+author: "Pete Laver"
+date: today
+
+format:
+  revealjs:
+    width: 1920
+    height: 1080
+    minScale: 0.5
+    maxScale: 1.5
+    output-file: ABC_2026_Laver.html
+    theme: [default, theme.scss]
+    title-slide-attributes:
+      data-background-image: "images/image4.png"
+      data-background-size: "contain"
+      data-background-position: "right"
+    transition: none        # no slide-to-slide transitions
+    slide-number: true
+    controls: true
+    hash: true
+    embed-resources: true   # single self-contained html file, easy to share
+    spotlight:
+      useAsPointer: true
+      pointerColor: "#ff0000"
+      size: 12
+      toggleSpotlightOnMouseDown: false
+      initialPresentationMode: true
+      presentingCursor: "default"
+      spotlightCursor: "none"
+      spotlightOnKeyPressAndHold: 73
+    css: style.css
+    include-in-header:
+      - text: |
+          <script src="funder-logos.js"></script>
+          <script src="gauge-from-form-automated.js"></script>
+          
+  html:
+    output-file: ABC_2026_Laver_notes.html
+    toc: true
+    number-sections: true
+    embed-resources: true
+    fig-align: center
+    css: notes-style.css
+revealjs-plugins:
+  - spotlight
+  - zoomit-ish
+
+bibliography: references.bib
+
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+source("gauge.R")
+```
+
+
+## Personal experience
+
+<br>
+<br>
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- Science is hard. 
+:::
+::: {.fragment}
+- We aren't always kind to our future selves. 
+:::
+::: {.fragment}
+- It is even harder to be kind to those who follow us.
+:::
+:::
+:::
+:::
+
+::: {.notes}
+In this session, we're going to go on a journey together before we actually get to R.
+
+Let's start right here in this room. 
+
+Raise your hand if you've ever opened up your own project notes, your notebook, or your lab notebook for an old analysis or project ... and found that you couldn't recreate the results or even the workflow?
+
+Does anyone want to briefly share about that experience?
+
+Now, raise your hand if you've tried to recreate the results or workflow from someone else, but failed to do so. 
+
+Does anyone want to share briefly about that?
+:::
+
+## Scientific credibility
+
+<br>
+<br>
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi spellcheck size=60px >}}
+:::
+::: {.definition-card}
+[credibility]{.def-term} — trust placed in an institution / researcher / group / finding by the scientific community and the public
+:::
+:::
+
+::: {.notes}
+Let's think about the field of scientific research as an institution. For the public to place their trust in science, what percentage of studies do you think should be possible to reproduce or replicate?
+
+Of the study replications and reproductions that have been attempted to date, what percentage do you think have been successful?
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+## Interactive responses
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "50%"
+library(qrcode)
+# qr <- qr_code("https://docs.google.com/forms/d/e/1FAIpQLScoCB8qP_F7_PQibXlbrCcta610dhzCR0mNN62F40K2f-iTGQ/viewform?usp=publish-editor")
+# plot(qr)
+```
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+## Ideal replication / reproduction rate?
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r}
+live_gauge("plotCredibility")
+```
+
+::: {.notes}
+These are your speaker notes. They will be hidden during the presentation but will appear in the rendered HTML notes document and when pressing `S` in the reveal.js presentation.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+## Actual replication / reproduction rate?
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r}
+live_gauge("plotActual")
+```
+
+::: {.notes}
+These are your speaker notes. They will be hidden during the presentation but will appear in the rendered HTML notes document and when pressing `S` in the reveal.js presentation.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Reliability matrix
+
+:::: {.mx-stage}
+
+
+::: {.mx-cell .fragment fragment-index=1 style="left:200px; top:120px;"}
+:::
+::: {.mx-cell .fragment fragment-index=1 style="left:600px; top:120px;"}
+:::
+::: {.mx-cell .fragment fragment-index=1 style="left:200px; top:520px;"}
+:::
+::: {.mx-cell .fragment fragment-index=1 style="left:600px; top:520px;"}
+:::
+
+::: {.mx-axis-title .fragment fragment-index=2 style="left:500px; top:0; width:200px;"}
+Data
+:::
+::: {.mx-axis-label .fragment fragment-index=2 style="left:300px; top:35px; width:200px;"}
+Same
+:::
+::: {.mx-axis-label .fragment fragment-index=2 style="left:700px; top:35px; width:200px;"}
+New
+:::
+::: {.mx-cell2 .fragment fragment-index=2 .fade-in-then-out style="left:200px; top:120px;"}
+:::
+
+::: {.mx-cell2 .fragment fragment-index=2 .fade-in-then-out style="left:600px; top:120px;"}
+:::
+
+::: {.mx-axis-title .fragment fragment-index=3 style="left:0; top:400px; height:200px;"}
+Analysis /<br>code
+:::
+::: {.mx-axis-label .fragment fragment-index=3 style="left:50px; top:200px; height:100px;"}
+Same
+:::
+::: {.mx-axis-label .fragment fragment-index=3 style="left:50px; top:700px; height:100px;"}
+New
+:::
+::: {.mx-cell3 .fragment fragment-index=3 .fade-in-then-out style="left:200px; top:120px;"}
+:::
+::: {.mx-cell3 .fragment fragment-index=3 .fade-in-then-out style="left:200px; top:520px;"}
+:::
+
+::: {.mx-cell .fragment fragment-index=4 style="left:200px; top:120px; border: 4px solid #f48c1f;"}
+Same data,<br>same code
+:::
+::: {.mx-cell .fragment fragment-index=5 style="left:600px; top:120px; border: 4px solid #f48c1f;"}
+New data,<br>same code
+:::
+::: {.mx-cell .fragment fragment-index=6 style="left:200px; top:520px; border: 4px solid #f48c1f;"}
+Same data,<br>new code
+:::
+::: {.mx-cell .fragment fragment-index=7 style="left:600px; top:520px; border: 4px solid #f48c1f;"}
+New data,<br>new code
+:::
+
+<!-- Step 1: cards appear on the right (fragment-index 1-4) -->
+<!-- Step 2: cards move into the matrix one at a time (fragment-index 5-8) -->
+<!-- --dx / --dy = target position minus starting position -->
+
+::: {.mx-axis-title .fragment fragment-index=8 style="left:1110px; top:0; width:200px;"}
+Result
+:::
+
+::: {.mx-slot .fragment fragment-index=9 style="left:1060px; top:90px;"}
+::: {.mx-card .fragment .mx-move fragment-index=15 style="--dx:-810px; --dy:580px; background:#c45426;"}
+Robust
+:::
+:::
+
+::: {.mx-slot .fragment fragment-index=10 style="left:1060px; top:310px;"}
+::: {.mx-card .fragment .mx-move fragment-index=14 style="--dx:-410px; --dy:-35px; background:#ffb217;"}
+Replicable
+:::
+:::
+
+::: {.mx-slot .fragment fragment-index=11 style="left:1060px; top:530px;"}
+::: {.mx-card .fragment .mx-move fragment-index=13 style="--dx:-810px; --dy:-255px; background:#2d2d2e;"}
+Reproducible
+:::
+:::
+
+::: {.mx-slot .fragment fragment-index=12 style="left:1060px; top:750px;"}
+::: {.mx-card .fragment .mx-move fragment-index=16 style="--dx:-410px; --dy:-80px; background:#b3382b;"}
+Generalizable
+:::
+:::
+
+::::
+
+::: {.notes}
+Flanagan, J. 2025. Reproducibility, replicability, robustness, and generalizability in corpus linguistics. International Journal of Corpus Linguistics 30(2):130-149. https://doi.org/10.1075/ijcl.24113.fla 
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Reproducibility, gene expression studies
+
+18 papers<br>
+<b>Same data</b> (public datasets)<br>
+<b>Same code</b> (original analytical pipeline)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotIoannidis2009")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotIoannidis2009you")
+```
+:::
+
+::::
+
+
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Ioannidis, J., Allison, D., Ball, C. et al. Repeatability of published microarray gene expression analyses. <em><b>Nat Genet 41</b></em>, 149–155 (2009). https://doi.org/10.1038/ng.295
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Replicability, oncology drug target studies
+
+67 projects<br>
+<b>New data</b> (new in-house wet-lab assays)<br>
+<b>Mixed code</b> (21% same code, 67% adapted models or assays)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotPrinz2011")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotPrinz2011you")
+```
+:::
+
+::::
+
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Prinz, F., Schlange, T. & Asadullah, K. Believe it or not: how much can we rely on published data on potential drug targets?. <em><b>Nat Rev Drug Discov 10</b></em>, 712 (2011). https://doi.org/10.1038/nrd3439-c1
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Replicability, preclinical cancer research studies
+
+53 papers<br>
+<b>New data</b> (new cell / animal models)<br>
+<b>Mixed code</b> (Same protocols / reagents, some adapted models)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotBegley2012")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+live_gauge("plotBegley2012you")
+```
+:::
+
+::::
+
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Begley, C., Ellis, L. Raise standards for preclinical cancer research. <em><b>Nature 483</b></em>, 531–533 (2012). https://doi.org/10.1038/483531a
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Replicability, psychology studies
+
+100 papers<br>
+<b>New data</b> (new participants)<br>
+<b>Same code</b> (original materials and protocols)
+
+```{r}
+live_gauge("plotOSC2015")
+```
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Open Science Collaboration, Estimating the reproducibility of psychological science. <em><b>Science 349</b></em>, aac4716 (2015). DOI:10.1126/science.aac4716
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+## Replicability, other fields
+
+47 papers, scoping review<br>
+<b>Mixed data</b> (20% re-analysis, ~80% some new trials)<br>
+<b>Mixed code</b> (some re-analysis, some adapted protocols)
+
+:::: {.columns}
+
+::: {.column width="25%"}
+```{r}
+live_gauge("plotCobey2023health")
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+live_gauge("plotCobey2023economics")
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+live_gauge("plotCobey2023biomedicine")
+```
+:::
+
+::: {.column width="25%"}
+```{r}
+live_gauge("plotCobey2023education")
+```
+:::
+
+::::
+
+
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Cobey, KD et al. (2023) Epidemiological characteristics and prevalence rates of research reproducibility across disciplines: A scoping review of articles published in 2018-2019 <em><b>eLife 12</b></em>:e78518. https://doi.org/10.7554/eLife.78518 
+:::
+:::
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## Normal Slide Title
+
+Your regular content goes here...
+
+
+
+::: {.notes}
+These are your speaker notes. They will be hidden during the presentation but will appear in the rendered HTML notes document and when pressing `S` in the reveal.js presentation.
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

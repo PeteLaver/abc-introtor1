@@ -1,0 +1,92 @@
+/*-- scss:defaults --*/
+
+// Palette — modern dark theme with a single accent color
+$body-bg: #ffffff;
+$body-color: #2d2d2e;
+$link-color: #c45426;
+
+$presentation-font-size-root: 30px;
+$presentation-heading-font: "Jost", "Helvetica Neue", sans-serif;
+$presentation-heading-color: #2d2d2e;
+$presentation-font-color: #2d2d2e;
+
+$code-block-bg: #1e1f26;
+$code-color: #ffb217;
+
+/*-- scss:rules --*/
+
+.reveal .slides section {
+  text-align: left;
+  padding: 0 40px;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4em;
+}
+
+.reveal h1 {
+  font-size: 1.9em;
+}
+
+.reveal h2 {
+  font-size: 1.4em;
+  color: #c45426;
+}
+
+// Title slide gets extra treatment
+.reveal .title-slide h1 {
+  font-size: 2.4em;
+  background: linear-gradient(90deg, #7dd3fc, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.reveal .slide-number {
+  color: #c45426;
+  background: transparent;
+}
+
+// Bigger, breathable bullets
+.reveal ul li, .reveal ol li {
+  margin-bottom: 0.35em;
+}
+
+// Subtle card style for callouts / stat boxes
+.stat-box {
+  background: #1e1f26;
+  border-left: 4px solid #c45426;
+  padding: 0.6em 1em;
+  border-radius: 6px;
+}
+
+// Auto-animate bar demo
+.bar {
+  height: 44px;
+  background: linear-gradient(90deg, #7dd3fc, #a78bfa);
+  border-radius: 6px;
+}
+
+
+
+.square-plot {
+  width: min(60vw, 600px);
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square-plot .html-widget,
+.square-plot .plotly,
+.square-plot .plot-container {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+
+

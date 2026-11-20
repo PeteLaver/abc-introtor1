@@ -1,0 +1,21 @@
+title: Zoomit-ish
+author: Hiroshi Suzuki
+description: Zooming, drawing and texting in a reveal.js presentation.
+version: 1.0.0
+license: MIT
+quarto-required: ">=1.5.0"
+contributes:
+  revealjs-plugins:
+    - name: RevealZoomitIsh
+      script:
+        - zoomit-ish-config.js
+        - zoomit-ish-core.js
+        - zoomit-ish-draw.js
+        - zoomit-ish-text.js
+        - zoomit-ish-canvas.js
+        - zoomit-ish-history.js
+        - zoomit-ish-zoom.js
+        - zoomit-ish-timer.js
+        - zoomit-ish-message.js
+        - zoomit-ish-keyboard.js
+        - zoomit-ish.js

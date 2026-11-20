@@ -1,0 +1,12 @@
+{
+  "Reveal plugin setup": {
+    "prefix": "config",
+    "body": [
+      "format:",
+      "  revealjs: default",
+      "revealjs-plugins:",
+      "  - zoomit-ish"
+    ],
+    "description": "Insert a minimal revealjs config using Zoomit-ish."
+  }
+}
