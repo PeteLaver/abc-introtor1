@@ -145,7 +145,7 @@
   gap: 1rem;
   justify-content: center; /* Horizontal centering */
   align-items: center;     /* Vertical centering */
-  min-height: 5vh;        /* Takes up most of the slide height */
+  min-height: 10vh;        /* Takes up most of the slide height */
   width: 100%;
 }
 
