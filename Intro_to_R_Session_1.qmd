@@ -510,35 +510,42 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Mixed data</b> (20% re-analysis, ~80% some new trials)<br>
 <b>Mixed code</b> (some re-analysis, some adapted protocols)
 
-::: {.fragment data-gauge="plotCobey2023health, plotCobey2023economics, plotCobey2023biomedicine, plotCobey2023education"}
 :::: {.columns}
 
 ::: {.column width="25%"}
+::: {.fragment data-gauge="plotCobey2023health"}
 ```{r}
 live_gauge("plotCobey2023health")
 ```
 :::
+:::
 
 ::: {.column width="25%"}
+::: {.fragment data-gauge="plotCobey2023economics"}
 ```{r}
 live_gauge("plotCobey2023economics")
 ```
 :::
+:::
 
 ::: {.column width="25%"}
+::: {.fragment data-gauge="plotCobey2023biomedicine"}
 ```{r}
 live_gauge("plotCobey2023biomedicine")
 ```
 :::
+:::
 
 ::: {.column width="25%"}
+::: {.fragment data-gauge="plotCobey2023education"}
 ```{r}
 live_gauge("plotCobey2023education")
 ```
 :::
+:::
 
 ::::
-:::
+
 
 
 ::: {.reference-container}
