@@ -581,29 +581,312 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## What is the problem?
+
+## >1,500 scientists interviewed
+
+<em><b>Nature</b></em> surveyed 1,576 researchers<br>
+about reproducing or replicating<br>
+their own or other's research
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.fragment data-gauge="plotBaker2016others"}
+```{r}
+live_gauge("plotBaker2016others")
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: {.fragment data-gauge="plotBaker2016own"}
+```{r}
+live_gauge("plotBaker2016own")
+```
+:::
+:::
+
+::::
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Baker, M. 1,500 scientists lift the lid on reproducibility. <em><b>Nature 533</b></em>, 452–454 (2016). https://doi.org/10.1038/533452a
+:::
+:::
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+## >1,500 scientists interviewed 2
+
+::: {.fullimage-container}
+::: {.fragment}
+![](images/baker_failed.png)
+:::
+:::
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Baker, M. 1,500 scientists lift the lid on reproducibility. <em><b>Nature 533</b></em>, 452–454 (2016). https://doi.org/10.1038/533452a
+:::
+:::
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+## What contributes to the problem?
+
+::: {.fullimage-container}
+::: {.fragment}
+![](images/baker_factors.png)
+:::
+:::
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Baker, M. 1,500 scientists lift the lid on reproducibility. <em><b>Nature 533</b></em>, 452–454 (2016). https://doi.org/10.1038/533452a
+:::
+:::
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+## Issues
 
 ::: {.fragment}
-::: {.center-container}
+::: {.full-container}
 ::: {.icon-wrapper}
 {{< mi edit_note size=60px >}}
 :::
-::: {.takehome-card}
+::: {.full-card}
+
+:::: {.hl-stage}
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
 ::: {.fragment}
-- ...
+<b>Statistical & design</b>
 :::
 ::: {.fragment}
-- ...
+- [Low statistical power]{.cause data-sol="3 5"}
 :::
 ::: {.fragment}
-- ...
+- [Researcher degrees of freedom / analytic flexibility]{.cause data-sol="1 2 3"}
 :::
+::: {.fragment}
+- [<em>p</em>-hacking]{.cause data-sol="3"}
+:::
+::: {.fragment}
+- [HARKing]{.cause data-sol="2 3"}
+:::
+::: {.fragment}
+- [Misuse and misinterpretation of <em>p</em>-values]{.cause data-sol="5"}
+:::
+::: {.fragment}
+- [Pseudoreplication]{.cause data-sol="1 5"}
+:::
+::: {.fragment}
+- [Unit-of-analysis errors]{.cause data-sol="1 5"}
+:::
+::: {.fragment}
+- [Low prior probability]{.cause data-sol="5"}
+:::
+::: {.fragment}
+- [Analytic variability]{.cause data-sol="5"}
+:::
+::: {.fragment}
+<b>Publication & reporting</b>
+:::
+::: {.fragment}
+- [File drawer problem]{.cause data-sol="3 6"}
+:::
+
+:::
+
+::: {.column width="25%"}
+
+::: {.fragment}
+- [Publication bias]{.cause data-sol="3"}
+:::
+::: {.fragment}
+- [Outcome switching]{.cause data-sol="2 3"}
+:::
+::: {.fragment}
+- [Selective outcome reporting]{.cause data-sol="3 5"}
+:::
+::: {.fragment}
+- [Spin & positive-result inflation]{.cause data-sol="3 5"}
+:::
+::: {.fragment}
+- [Reporting errors]{.cause data-sol="1 4"}
+:::
+::: {.fragment}
+- [Insufficient methodological detail]{.cause data-sol="1 4 5"}
+:::
+::: {.fragment}
+<b>Incentives & culture</b>
+:::
+::: {.fragment}
+- [Publish or perish]{.cause data-sol="6"}
+:::
+::: {.fragment}
+- [Novelty bias]{.cause data-sol="3 6"}
+:::
+::: {.fragment}
+- [Questionable research practices]{.cause data-sol="6"}
+:::
+::: {.fragment}
+- [Fraud]{.cause data-sol="4"}
+:::
+::: {.fragment}
+- [Poor training & mentoring]{.cause data-sol="6"}
+:::
+
+:::
+
+::: {.column width="25%"}
+
+
+::: {.fragment}
+<b>Transparency, infrastructure</b>
+:::
+::: {.fragment}
+- [Data & code not shared]{.cause data-sol="4"}
+:::
+::: {.fragment}
+- [Code that doesn't run]{.cause data-sol="2 4"}
+:::
+::: {.fragment}
+- [Undocumented analysis steps]{.cause data-sol="1 2"}
+:::
+::: {.fragment}
+- [Manual, untraceable edits]{.cause data-sol="1"}
+:::
+::: {.fragment}
+- [Quality of materials & reagents]{.cause data-sol="4"}
+:::
+::: {.fragment}
+<b>Other</b>
+:::
+::: {.fragment}
+- [Poor measurement validity]{.cause data-sol="7"}
+:::
+::: {.fragment}
+- [Weak theory]{.cause data-sol="7"}
+:::
+::: {.fragment}
+- [Hidden / lurking variables (confounders)]{.cause data-sol="5"}
+:::
+::: {.fragment}
+- [True heterogeneity]{.cause data-sol="7"}
+:::
+
+:::
+
+::: {.column width="25%"}
+
+
+::: {.fragment}
+<b>Solutions</b>
+:::
+::: {.fragment}
+1. [Analsysis as code]{.cause data-sol="1"}
+:::
+::: {.fragment}
+2. [Version control & env. mgt.]{.cause data-sol="2"}
+:::
+::: {.fragment}
+3. [Preregistration]{.cause data-sol="3"}
+:::
+::: {.fragment}
+4. [Open data, code, materials]{.cause data-sol="4"}
+:::
+::: {.fragment}
+5. [Better design, statistics, reporting]{.cause data-sol="5"}
+:::
+::: {.fragment}
+6. [Culture, incentives, training]{.cause data-sol="6"}
+:::
+::: {.fragment}
+7. [Other]{.cause data-sol="7"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="1"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="2"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="3"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="4"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="5"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="6"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="7"}
+:::
+
+:::
+
+::::
+
+::::
+
+
 :::
 :::
 :::
 
 ::: {.notes}
-Science has a replication, reproduction, etc problem. Part of that problem (though not all of it) is because there isn't a record of what analyses were done and how they were done. There is no audit trail, and it is not transparent or open access.
+
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -735,7 +1018,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 ::: {.notes}
-Human Genome Organization (HUGO). HUGO Gene Nomenclature Committee (HGNC). Changed 
+Human Genome Organization (HUGO). HUGO Gene Nomenclature Committee (HGNC). Changed 27 gene names. Excel gene-name errors (e.g., SEPT2 became a date) affected about 1 in 5 genomics papers with supplementary gene lists (Ziemann et al., 2016)
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}

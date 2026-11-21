@@ -113,6 +113,15 @@
   clip-path: inset(5px);
 }
 
+.full-card {
+  flex: 0 1 1600px;
+  padding: 1.25rem;
+  margin: 0;
+  border-left: 4px solid #2d2d2e;
+  background-color: #b3382b20;
+  border-radius: 0 .25rem .25rem 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
 
 .takehome-card {
   flex: 0 1 800px;
@@ -137,6 +146,16 @@
   font-weight: bold;
   color: #2d2d2e;
   font-size: 1.1em;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  min-height: 100vh;        /* Takes up most of the slide height */
+  width: 100%;
 }
 
 .fullimage-container {
@@ -278,5 +297,64 @@
 }
 
 
+
+
+/* markers take no space and show nothing */
+.hl-step { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* base state for all items */
+.cause { transition: color .3s, opacity .3s; }
+
+/* when any solution is active, dim everything */
+.hl-stage:has(.hl-step.current-fragment) .cause { opacity: .3; }
+
+/* labels hidden unless their solution is active */
+.sol-label { display: none; }
+
+/* --- one block per solution --- */
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-sol~="1"],
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] {
+  color: #c45426; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] { 
+  display: block; }
+
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-sol~="2"] {
+  color: #ffb217; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .sol-label[data-sol="2"] { 
+  display: block; color: #ffb217; }
+  
+  .hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-sol~="3"] {
+  color: #2d2d2e; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .sol-label[data-sol="3"] { 
+  display: block; color: #2d2d2e; }
+  
+  .hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-sol~="4"] {
+  color: #b3382b; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .sol-label[data-sol="4"] { 
+  display: block; color: #b3382b; }
+  
+  .hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-sol~="5"] {
+  color: #f48c1f; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .sol-label[data-sol="5"] { 
+  display: block; color: #f48c1f; }
+  
+  .hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-sol~="6"] {
+  color: #c45426; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .sol-label[data-sol="6"] { 
+  display: block; color: #c45426; }
+  
+    .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-sol~="7"] {
+  color: #ffb217; opacity: 1; font-weight: 700;
+}
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .sol-label[data-sol="7"] { 
+  display: block; color: #ffb217; }
+  
+  
 
 

@@ -22,6 +22,8 @@ const GAUGES = {
   plotCobey2023economics:    { col: 11, label: 'Economics',      showIQR: false  },
   plotCobey2023biomedicine:    { col: 12, label: 'Biomedicine',      showIQR: false  },
   plotCobey2023education:    { col: 13, label: 'Education',      showIQR: false  },
+  plotBaker2016others:    { col: 14, label: 'Others',      showIQR: false  },
+  plotBaker2016own:    { col: 15, label: 'Own',      showIQR: false  },
 };
 // =====================================================================
 
