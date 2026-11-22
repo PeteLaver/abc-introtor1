@@ -931,8 +931,160 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.takehome-card}
 
 
-<b>Solutions</b>
+<b>Solutions</b><br>
 
+:::: {.columns}
+
+::: {.column width="10%"}
+
+::: {.sol-row}
+::: {.sol-text}
+<b>1</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+
+::: {.sol-row}
+::: {.sol-text}
+<b>2</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+<b>3</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+<b>4</b>
+:::
+::: {.sol-bar}
+:::
+:::
+ 
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+<b>5</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+<b>6</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+<b>7</b>
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+&nbsp;
+:::
+::: {.sol-bar}
+:::
+:::
+
+:::
+
+::: {.column width="90%"}
 
 ::: {.sol-row}
 ::: {.sol-text}
@@ -970,7 +1122,6 @@ row_bar("plotenvmgt")
 :::
 :::
 
-
 ::: {.sol-row}
 ::: {.sol-text}
 Preregistration
@@ -982,7 +1133,6 @@ row_bar("plotpreregistration")
 ```
 :::
 :::
-
 
 ::: {.sol-row}
 ::: {.sol-text}
@@ -1020,8 +1170,6 @@ row_bar("plotopenmaterials")
 :::
 :::
 
-
-
 ::: {.sol-row}
 ::: {.sol-text}
 Better design
@@ -1029,7 +1177,7 @@ Better design
 ::: {.sol-bar}
 ```{r}
 #| echo: false
-row_bar("plotdesign")
+row_bar("plotbetterdesign")
 ```
 :::
 :::
@@ -1041,7 +1189,7 @@ Better statistics
 ::: {.sol-bar}
 ```{r}
 #| echo: false
-row_bar("plotstatistics")
+row_bar("plotbetterstatistics")
 ```
 :::
 :::
@@ -1053,11 +1201,10 @@ Better reporting
 ::: {.sol-bar}
 ```{r}
 #| echo: false
-row_bar("plotreporting")
+row_bar("plotbetterreporting")
 ```
 :::
 :::
-
 
 ::: {.sol-row}
 ::: {.sol-text}
@@ -1154,6 +1301,13 @@ row_bar("plotmetaanalysis")
 ```
 :::
 :::
+
+:::
+
+::::
+
+
+
 
 
 :::
