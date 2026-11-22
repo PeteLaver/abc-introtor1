@@ -947,34 +947,54 @@ row_bar("plotanalysisascode")
 :::
 
 
-2. Version control, 
-<br>environment management
+
+::: {.sol-row}
+::: {.sol-text}
+2\. Version control
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotversioncontrol")
+```
+:::
+:::
+::: {.sol-row}
+::: {.sol-text}
+environment management
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotenvmgt")
+```
+:::
+:::
+
+
+3\. Preregistration
 
 
 
-3. Preregistration
-
-
-
-4. Open data, 
+4\. Open data, 
 <br>open code, 
 <br>open materials
 
 
 
-5. Better design, 
+5\. Better design, 
 <br>better statistics, 
 <br>better reporting
 
 
 
-6. Culture, 
+6\. Culture, 
 <br>incentives, 
 <br>training
 
 
 
-7. Other: 
+7\. Other: 
 <br>measurement validation, 
 <br>theory, 
 <br>multi-centre, 
