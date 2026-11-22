@@ -926,21 +926,16 @@ transform: translate(var(--dx), var(--dy));
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-expose~="7"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .sol-row {
-display: flex;
+display: grid;
+grid-template-columns: 2em 1fr 360px; 
 align-items: center;
-justify-content: space-between;
-gap: 1em;
-margin: 0; 
-min-height: 0;
-}
-.sol-text {
-flex: 1 1 auto;
-text-align: left;
-line-height: 1.15; 
+column-gap: 1em;
 margin: 0;
 }
-.sol-text p { margin: 0; } 
-.sol-bar { flex: 0 0 360px; line-height: 0; } 
+.sol-num { text-align: right; margin: 0; }
+.sol-text { text-align: left; line-height: 1.15; margin: 0; }
+.sol-num p, .sol-text p { margin: 0; }
+.sol-bar { line-height: 0; }
 .sol-bar > div { width: 100% !important; }
 </style>
   <style type="text/css">.reveal
@@ -4194,154 +4189,10 @@ display:block!important;
 </div>
 <div class="takehome-card">
 <p><b>Solutions</b><br></p>
-<div class="columns">
-<div class="column" style="width:10%;">
 <div class="sol-row">
-<div class="sol-text">
-<p><b>1</b></p>
+<div class="sol-num">
+<p><strong>1</strong></p>
 </div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>2</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>3</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>4</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>5</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>6</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p><b>7</b></p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-<div class="sol-row">
-<div class="sol-text">
-<p> </p>
-</div>
-<div class="sol-bar">
-
-</div>
-</div>
-</div><div class="column" style="width:90%;">
-<div class="sol-row">
 <div class="sol-text">
 <p>Analysis as code</p>
 </div>
@@ -4355,6 +4206,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>2</strong></p>
+</div>
 <div class="sol-text">
 <p>Version control</p>
 </div>
@@ -4368,6 +4222,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Env. mgt</p>
 </div>
@@ -4381,6 +4238,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>3</strong></p>
+</div>
 <div class="sol-text">
 <p>Preregistration</p>
 </div>
@@ -4394,6 +4254,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>4</strong></p>
+</div>
 <div class="sol-text">
 <p>Open data</p>
 </div>
@@ -4407,6 +4270,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Open code</p>
 </div>
@@ -4420,6 +4286,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Open materials</p>
 </div>
@@ -4433,6 +4302,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>5</strong></p>
+</div>
 <div class="sol-text">
 <p>Better design</p>
 </div>
@@ -4446,6 +4318,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Better statistics</p>
 </div>
@@ -4459,6 +4334,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Better reporting</p>
 </div>
@@ -4472,6 +4350,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>6</strong></p>
+</div>
 <div class="sol-text">
 <p>Culture</p>
 </div>
@@ -4485,6 +4366,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Incentives</p>
 </div>
@@ -4498,6 +4382,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Training</p>
 </div>
@@ -4511,6 +4398,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+<p><strong>7</strong></p>
+</div>
 <div class="sol-text">
 <p>Measurement validation</p>
 </div>
@@ -4524,6 +4414,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Theory</p>
 </div>
@@ -4537,6 +4430,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Multi-centre</p>
 </div>
@@ -4550,6 +4446,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Multi-study</p>
 </div>
@@ -4563,6 +4462,9 @@ display:block!important;
 </div>
 </div>
 <div class="sol-row">
+<div class="sol-num">
+
+</div>
 <div class="sol-text">
 <p>Meta-analysis</p>
 </div>
@@ -4575,7 +4477,6 @@ display:block!important;
 </div>
 </div>
 </div>
-</div></div>
 </div>
 </div>
 <aside class="notes">

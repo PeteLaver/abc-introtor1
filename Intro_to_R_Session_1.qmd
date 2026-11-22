@@ -933,160 +933,11 @@ African Brain Child | Neurosciences Institute | UCT
 
 <b>Solutions</b><br>
 
-:::: {.columns}
-
-::: {.column width="10%"}
 
 ::: {.sol-row}
-::: {.sol-text}
-<b>1</b>
+::: {.sol-num}
+**1**
 :::
-::: {.sol-bar}
-:::
-:::
-
-
-::: {.sol-row}
-::: {.sol-text}
-<b>2</b>
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-<b>3</b>
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-<b>4</b>
-:::
-::: {.sol-bar}
-:::
-:::
- 
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-<b>5</b>
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-<b>6</b>
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-<b>7</b>
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-::: {.sol-row}
-::: {.sol-text}
-&nbsp;
-:::
-::: {.sol-bar}
-:::
-:::
-
-:::
-
-::: {.column width="90%"}
-
-::: {.sol-row}
 ::: {.sol-text}
 Analysis as code
 :::
@@ -1099,6 +950,9 @@ row_bar("plotanalysisascode")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**2**
+:::
 ::: {.sol-text}
 Version control
 :::
@@ -1111,6 +965,8 @@ row_bar("plotversioncontrol")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Env. mgt
 :::
@@ -1123,6 +979,9 @@ row_bar("plotenvmgt")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**3**
+:::
 ::: {.sol-text}
 Preregistration
 :::
@@ -1135,6 +994,9 @@ row_bar("plotpreregistration")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**4**
+:::
 ::: {.sol-text}
 Open data
 :::
@@ -1147,6 +1009,8 @@ row_bar("plotopendata")
 :::
  
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Open code
 :::
@@ -1159,6 +1023,8 @@ row_bar("plotopencode")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Open materials
 :::
@@ -1171,6 +1037,9 @@ row_bar("plotopenmaterials")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**5**
+:::
 ::: {.sol-text}
 Better design
 :::
@@ -1183,6 +1052,8 @@ row_bar("plotbetterdesign")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Better statistics
 :::
@@ -1195,6 +1066,8 @@ row_bar("plotbetterstatistics")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Better reporting
 :::
@@ -1207,6 +1080,9 @@ row_bar("plotbetterreporting")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**6**
+:::
 ::: {.sol-text}
 Culture
 :::
@@ -1219,6 +1095,8 @@ row_bar("plotculture")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Incentives
 :::
@@ -1231,6 +1109,8 @@ row_bar("plotincentives")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Training
 :::
@@ -1243,6 +1123,9 @@ row_bar("plottraining")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+**7**
+:::
 ::: {.sol-text}
 Measurement validation
 :::
@@ -1255,6 +1138,8 @@ row_bar("plotmeasurement")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Theory
 :::
@@ -1267,6 +1152,8 @@ row_bar("plottheory")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Multi-centre
 :::
@@ -1279,6 +1166,8 @@ row_bar("plotmulticentre")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Multi-study
 :::
@@ -1291,6 +1180,8 @@ row_bar("plotmultistudy")
 :::
 
 ::: {.sol-row}
+::: {.sol-num}
+:::
 ::: {.sol-text}
 Meta-analysis
 :::
@@ -1302,9 +1193,6 @@ row_bar("plotmetaanalysis")
 :::
 :::
 
-:::
-
-::::
 
 
 

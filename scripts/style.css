@@ -367,21 +367,16 @@
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   
 .sol-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2em 1fr 360px;   /* number | text | bar slot */
   align-items: center;
-  justify-content: space-between;
-  gap: 1em;
-  margin: 0;                 /* was .3em */
-  min-height: 0;
-}
-.sol-text {
-  flex: 1 1 auto;
-  text-align: left;
-  line-height: 1.15;         /* tighter, matters most for the multi-line rows */
+  column-gap: 1em;
   margin: 0;
 }
-.sol-text p { margin: 0; }   /* Pandoc wraps text in <p>, which adds default margins */
-.sol-bar { flex: 0 0 360px; line-height: 0; }   /* line-height 0 removes the stray gap under the canvas */
+.sol-num  { text-align: right; margin: 0; }
+.sol-text { text-align: left; line-height: 1.15; margin: 0; }
+.sol-num p, .sol-text p { margin: 0; }
+.sol-bar  { line-height: 0; }
 .sol-bar > div { width: 100% !important; }
 
 
