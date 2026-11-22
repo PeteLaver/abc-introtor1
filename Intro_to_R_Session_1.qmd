@@ -632,7 +632,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## >1,500 scientists interviewed 2
+## >1,500 scientists, by field
 
 ::: {.fullimage-container}
 ::: {.fragment}
@@ -720,28 +720,28 @@ African Brain Child | Neurosciences Institute | UCT
 - [Low statistical power]{.cause data-prevent="5" data-mitigate="3"}
 :::
 ::: {.fragment}
-- [Researcher degrees of freedom / analytic flexibility]{.cause data-expose="1 2" data-mitigate="3"}
+- [Researcher degrees of freedom / analytic flexibility]{.cause data-expose="1 2 8" data-mitigate="3"}
 :::
 ::: {.fragment}
 - [<em>p</em>-hacking]{.cause data-mitigate="3"}
 :::
 ::: {.fragment}
-- [HARKing]{.cause data-prevent="3" data-expose="2"}
+- [HARKing]{.cause data-prevent="3" data-expose="2 8"}
 :::
 ::: {.fragment}
 - [Misuse and misinterpretation of <em>p</em>-values]{.cause data-mitigate="5"}
 :::
 ::: {.fragment}
-- [Pseudoreplication]{.cause data-expose="1" data-prevent="5"}
+- [Pseudoreplication]{.cause data-expose="1 8" data-prevent="5"}
 :::
 ::: {.fragment}
-- [Unit-of-analysis errors]{.cause data-expose="1" data-prevent="5"}
+- [Unit-of-analysis errors]{.cause data-expose="1 8" data-prevent="5"}
 :::
 ::: {.fragment}
 - [Low prior probability]{.cause data-mitigate="5"}
 :::
 ::: {.fragment}
-- [Analytic variability]{.cause data-expose="1" data-mitigate="5"}
+- [Analytic variability]{.cause data-expose="1 8" data-mitigate="5"}
 :::
 ::: {.fragment}
 <b>Publication, reporting</b>
@@ -758,7 +758,7 @@ African Brain Child | Neurosciences Institute | UCT
 - [Publication bias]{.cause data-mitigate="3 6"}
 :::
 ::: {.fragment}
-- [Outcome switching]{.cause data-prevent="3" data-expose="2"}
+- [Outcome switching]{.cause data-prevent="3" data-expose="2 8"}
 :::
 ::: {.fragment}
 - [Selective outcome reporting]{.cause data-prevent="3" data-mitigate="5"}
@@ -767,10 +767,10 @@ African Brain Child | Neurosciences Institute | UCT
 - [Spin & positive-result inflation]{.cause data-mitigate="3 5"}
 :::
 ::: {.fragment}
-- [Reporting errors]{.cause data-prevent="1" data-expose="4"}
+- [Reporting errors]{.cause data-prevent="1 8" data-expose="4"}
 :::
 ::: {.fragment}
-- [Insufficient methodological detail]{.cause data-mitigate="1 4 5"}
+- [Insufficient methodological detail]{.cause data-mitigate="1 4 5 8"}
 :::
 ::: {.fragment}
 <b>Incentives, culture</b>
@@ -785,7 +785,7 @@ African Brain Child | Neurosciences Institute | UCT
 - [Questionable research practices]{.cause data-mitigate="6"}
 :::
 ::: {.fragment}
-- [Fraud]{.cause data-expose="4"}
+- [Fraud]{.cause data-expose="4 8"}
 :::
 ::: {.fragment}
 - [Poor training & mentoring]{.cause data-mitigate="6"}
@@ -800,19 +800,19 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Transparency, infrastructure</b>
 :::
 ::: {.fragment}
-- [Data & code not shared]{.cause data-prevent="4"}
+- [Data & code not shared]{.cause data-prevent="4 8"}
 :::
 ::: {.fragment}
-- [Code that doesn't run]{.cause data-mitigate="2" data-expose="4"}
+- [Code that doesn't run]{.cause data-mitigate="2 8" data-expose="4"}
 :::
 ::: {.fragment}
-- [Undocumented analysis steps]{.cause data-prevent="1 2"}
+- [Undocumented analysis steps]{.cause data-prevent="1 2 8"}
 :::
 ::: {.fragment}
-- [Manual, untraceable edits]{.cause data-prevent="1"}
+- [Manual, untraceable edits]{.cause data-prevent="1 8"}
 :::
 ::: {.fragment}
-- [Quality of materials & reagents]{.cause data-mitigate="4"}
+- [Quality of materials & reagents]{.cause data-mitigate="4 8"}
 :::
 ::: {.fragment}
 <b>Other</b>
@@ -839,16 +839,16 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Solutions</b>
 :::
 ::: {.fragment}
-1. [Analsysis as code]{.cause data-sol="1"}
+1. [Analysis as code]{.cause data-sol="1 8"}
 :::
 ::: {.fragment}
-2. [Version control & env. mgt.]{.cause data-sol="2"}
+2. [Version control & env. mgt.]{.cause data-sol="2 8"}
 :::
 ::: {.fragment}
 3. [Preregistration]{.cause data-sol="3"}
 :::
 ::: {.fragment}
-4. [Open data, code, materials]{.cause data-sol="4"}
+4. [Open data, code, materials]{.cause data-sol="4 8"}
 :::
 ::: {.fragment}
 5. [Better design, statistics, reporting]{.cause data-sol="5"}
@@ -865,16 +865,16 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Impact</b>
 :::
 ::: {.fragment}
-[Prevents]{.cause data-prevent="1 2 3 4 5 6 7"}
+[Prevents]{.cause data-prevent="1 2 3 4 5 6 7 8"}
 :::
 ::: {.fragment}
-[Mitigates]{.cause data-mitigate="1 2 3 4 5 6 7"}
+[Mitigates]{.cause data-mitigate="1 2 3 4 5 6 7 8"}
 :::
 ::: {.fragment}
-[Exposes]{.cause data-expose="1 2 3 4 5 6 7"}
+[Exposes]{.cause data-expose="1 2 3 4 5 6 7 8"}
 :::
 ::: {.fragment}
-[Needs other work]{.cause data-gap="1 2 3 4 5 6 7"}
+[Needs other work]{.cause data-gap="1 2 3 4 5 6 7 8"}
 :::
 ::: {.hl-step .fragment .current-visible data-sol="1"}
 :::
@@ -889,6 +889,8 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.hl-step .fragment .current-visible data-sol="6"}
 :::
 ::: {.hl-step .fragment .current-visible data-sol="7"}
+:::
+::: {.hl-step .fragment .current-visible data-sol="8"}
 :::
 
 
@@ -1217,6 +1219,28 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+
+## What is code?
+
+
+
+::: {.notes}
+Recipe. Think lab notebook. 
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+
 ## Why code?
 
 ```{r}
@@ -1269,25 +1293,40 @@ African Brain Child | Neurosciences Institute | UCT
 
 :::: {.columns}
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 ::: {.fragment}
-![](images/sept1_gene.png)
+![](images/sept1_gene.png){width=80%}
 :::
 :::
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 ::: {.fragment}
-![](images/sept1_date.png)
+![](images/sept1_date.png){width=80%}
 :::
 :::
 
-::: {.column width="33%"}
-::: {.fragment}
-![](images/bruford_et_al_2020.png)
-:::
-:::
 
 ::::
+
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+## Gene name errors 2
 
 
 ::: {.reference-container}
@@ -1297,13 +1336,48 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.reference-card}
 - Ziemann, M., Eren, Y., & El-Osta, A. (2016). Gene name errors are widespread in the scientific literature. <em><b>Genome biology, 17</b></em>(1), 177. https://doi.org/10.1186/s13059-016-1044-7
 - Abeysooriya, M., Soria, M., Kasu, M. S., & Ziemann, M. (2021). Gene name errors: Lessons not learned. <em><b>PLoS computational biology, 17</b></em>(7), e1008984. https://doi.org/10.1371/journal.pcbi.1008984
-- Bruford, E.A., Braschi, B., Denny, P. <em>et al</em>. Guidelines for human gene nomenclature. <em><b>Nat Genet 52</b></em>, 754–758 (2020). https://doi.org/10.1038/s41588-020-0669-3
 :::
 :::
 
 
 ::: {.notes}
-Human Genome Organization (HUGO). HUGO Gene Nomenclature Committee (HGNC). Changed 27 gene names. Excel gene-name errors (e.g., SEPT2 became a date) affected about 1 in 5 genomics papers with supplementary gene lists (Ziemann et al., 2016)
+Excel gene-name errors (e.g., SEPT2 became a date) affected about 1 in 5 genomics papers with supplementary gene lists (Ziemann et al., 2016)
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Gene name errors 3
+
+:::: {.columns}
+
+::: {.column width="100%"}
+::: {.fragment}
+![](images/bruford_et_al_2020.png){width=50% fig-align="center"}
+:::
+:::
+::::
+
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+Bruford, E.A., Braschi, B., Denny, P. <em>et al</em>. Guidelines for human gene nomenclature. <em><b>Nat Genet 52</b></em>, 754–758 (2020). https://doi.org/10.1038/s41588-020-0669-3
+:::
+:::
+
+
+::: {.notes}
+Human Genome Organization (HUGO). HUGO Gene Nomenclature Committee (HGNC). Changed 27 gene names.
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -1358,19 +1432,26 @@ African Brain Child | Neurosciences Institute | UCT
 ## Economics and austerity measures
 
 
+::: {.fullimage-container}
+::: {.fragment}
+![](images/rr_error.png)
+:::
+:::
+
+
 ::: {.reference-container}
 ::: {.icon-wrapper}
 {{< mi article size=60px >}}
 :::
 ::: {.reference-card}
 - Carmen M. Reinhart & Kenneth S. Rogoff, 2010. Growth in a Time of Debt, <em><b>American Economic Review 100</b></em>(2), p. 573-578
-- Herndon, Thomas, Ash, Michael and Pollin, Robert, (2014), Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff, <em><b>Cambridge Journal of Economics, 38</b></em>, issue 2, p. 257-279
 :::
 :::
 
 
 ::: {.notes}
-
+5 out of 20 selected countries were ommited when using the AVERAGE function (Australia, Austria, Belgium, Canada, and Denmark). The rest were Finland, France, Germany, Greece, Ireland, Italy, Japan,
+Netherlands, New Zealand, Norway, Portugal, Spain, Sweden, the United Kingdom, and the United States.
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -1384,18 +1465,23 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+
 ## Economics and austerity measures 2
 
-::: {.fullimage-container}
-::: {.fragment}
-![](images/rr_error.png)
+
+::: {.reference-container}
+::: {.icon-wrapper}
+{{< mi article size=60px >}}
+:::
+::: {.reference-card}
+- Carmen M. Reinhart & Kenneth S. Rogoff, 2010. Growth in a Time of Debt, <em><b>American Economic Review 100</b></em>(2), p. 573-578
+- Herndon, Thomas, Ash, Michael and Pollin, Robert, (2014), Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff, <em><b>Cambridge Journal of Economics, 38</b></em>, issue 2, p. 257-279
 :::
 :::
 
 
 ::: {.notes}
-5 out of 20 selected countries were ommited when using the AVERAGE function (Australia, Austria, Belgium, Canada, and Denmark). The rest were Finland, France, Germany, Greece, Ireland, Italy, Japan,
-Netherlands, New Zealand, Norway, Portugal, Spain, Sweden, the United Kingdom, and the United States.
+
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -1534,9 +1620,223 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## R as part of an ecosystem
+## R is one part of an ecosystem
 
-...
+<br><br>
+
+:::: {.columns}
+
+
+
+:::: {.eco-stage}
+
+::: {.column width="75%"}
+
+::: {.eco-stack}
+
+::: {.fragment}
+::: {.eco-layer data-flow="2"}
+::: {.eco-q}
+Who helps, and who maintains it?
+:::
+::: {.eco-name}
+**Community**
+:::
+::: {.eco-tools}
+R Core Team, Stack Overflow, rOpenSci, user groups, GitHub issues, Posit Community
+:::
+:::
+:::
+
+::: {.fragment}
+::: {.eco-layer data-flow="3 6"}
+::: {.eco-q}
+What runs my instructions?
+:::
+::: {.eco-name}
+**Engine**
+:::
+::: {.eco-tools}
+R Language and compiler. The engine that does the computation. Desktop, cloud, UCT HPC.
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="2 6"}
+::: {.eco-q}
+Where do I work?
+:::
+::: {.eco-name}
+**Interface**
+:::
+::: {.eco-tools}
+IDE: RStudio, Positron, VS Code, desktop or cloud
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="2"}
+::: {.eco-q}
+What does my work get saved in?
+:::
+::: {.eco-name}
+**Record**
+:::
+::: {.eco-tools}
+Scripts or text files (.R, .qmd)
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="3"}
+::: {.eco-q}
+What can I do beyond the basics?
+:::
+::: {.eco-name}
+**Extend**
+:::
+::: {.eco-tools}
+Packages, CRAN, Bioconductor, GitHub
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="1"}
+::: {.eco-q}
+Where does the information come from?
+:::
+::: {.eco-name}
+**Data**
+:::
+::: {.eco-tools}
+UCT RDS, CSV, Excel, SPSS, databases, APIs
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="4"}
+::: {.eco-q}
+How does it become a paper or talk?
+:::
+::: {.eco-name}
+**Present**
+:::
+::: {.eco-tools}
+Quarto, Markdown, Typst/LaTeX, Pandoc
+:::
+:::
+:::
+  
+::: {.fragment}
+::: {.eco-layer data-flow="5"}
+::: {.eco-q}
+Where does it live, and who sees it?
+:::
+::: {.eco-name}
+**Share**
+:::
+::: {.eco-tools}
+Git, GitHub, OSF/Zenodo, Shiny, Docker
+:::
+:::
+:::
+
+
+:::
+
+
+::: {.hl-step .fragment .current-visible data-flow="1"}
+:::
+::: {.hl-step .fragment .current-visible data-flow="2"}
+:::
+::: {.hl-step .fragment .current-visible data-flow="3"}
+:::
+::: {.hl-step .fragment .current-visible data-flow="4"}
+:::
+::: {.hl-step .fragment .current-visible data-flow="5"}
+:::
+::: {.hl-step .fragment .current-visible data-flow="6"}
+:::
+  
+::: {.eco-note data-flow="1"}
+Data arrive
+:::
+::: {.eco-note data-flow="2"}
+You write code
+:::
+::: {.eco-note data-flow="3"}
+R runs it, using packages
+:::
+::: {.eco-note data-flow="4"}
+Quarto weaves results and text into a document
+:::
+::: {.eco-note data-flow="5"}
+Git records every change; GitHub shares it
+:::
+::: {.eco-note data-flow="6"}
+To start, you need only two layers
+:::
+
+:::
+
+::::  
+
+::::
+
+
+
+
+
+
+## R ecosystem
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+::: {.fragment}
+- https://www.r-project.org/
+:::
+::: {.fragment}
+- https://www.rousseeuwprize.org/2026/laureates
+:::
+::: {.fragment}
+- https://cran.r-project.org/
+:::
+::: {.fragment}
+- https://www.bioconductor.org/
+:::
+::: {.fragment}
+- https://posit.co/
+:::
+::: {.fragment}
+- https://shiny.posit.co/
+:::
+::: {.fragment}
+- https://rmarkdown.rstudio.com/
+:::
+::: {.fragment}
+- https://quarto.org/
+:::
+::: {.fragment}
+- https://posit.co/products/ide/positron
+:::
+::: {.fragment}
+- https://posit.co/products/open-source/rstudio
+:::
+::: {.fragment}
+- https://github.com/
+:::
+:::
+:::
+:::
 
 ::: {.notes}
 R fits well into a broader ecosystem whereby analysis code (R) sits alongside presentation code (LaTeX, Quarto, md, etc) so that code, output, text, figures all sit within a single document that can produce reports, journal articles, presentations, web pages, and several other output formats.
@@ -1547,6 +1847,7 @@ R fits well into a broader ecosystem whereby analysis code (R) sits alongside pr
 ::: footer
 African Brain Child | Neurosciences Institute | UCT
 :::
+
 
 
 
