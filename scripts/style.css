@@ -370,8 +370,8 @@
   display: flex;
   align-items: center;          /* bar centred against multi-line text */
   justify-content: space-between;
-  gap: 1.5em;
-  margin: .3em 0;
+  gap: 0.5em;
+  margin: .1em 0;
 }
 .sol-text { flex: 1 1 auto; text-align: left; }
 .sol-bar  { flex: 0 0 420px; }  /* the fixed slot: same width and right edge on every row */

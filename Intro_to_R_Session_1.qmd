@@ -936,7 +936,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 ::: {.sol-row}
 ::: {.sol-text}
-1\. Analysis as code
+Analysis as code
 :::
 ::: {.sol-bar}
 ```{r}
@@ -946,11 +946,9 @@ row_bar("plotanalysisascode")
 :::
 :::
 
-
-
 ::: {.sol-row}
 ::: {.sol-text}
-2\. Version control
+Version control
 :::
 ::: {.sol-bar}
 ```{r}
@@ -959,9 +957,10 @@ row_bar("plotversioncontrol")
 ```
 :::
 :::
+
 ::: {.sol-row}
 ::: {.sol-text}
-environment management
+Env. mgt
 :::
 ::: {.sol-bar}
 ```{r}
@@ -972,34 +971,189 @@ row_bar("plotenvmgt")
 :::
 
 
-3\. Preregistration
+::: {.sol-row}
+::: {.sol-text}
+Preregistration
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotpreregistration")
+```
+:::
+:::
+
+
+::: {.sol-row}
+::: {.sol-text}
+Open data
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotopendata")
+```
+:::
+:::
+ 
+::: {.sol-row}
+::: {.sol-text}
+Open code
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotopencode")
+```
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+Open materials
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotopenmaterials")
+```
+:::
+:::
 
 
 
-4\. Open data, 
-<br>open code, 
-<br>open materials
+::: {.sol-row}
+::: {.sol-text}
+Better design
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotdesign")
+```
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+Better statistics
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotstatistics")
+```
+:::
+:::
+
+::: {.sol-row}
+::: {.sol-text}
+Better reporting
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotreporting")
+```
+:::
+:::
 
 
+::: {.sol-row}
+::: {.sol-text}
+Culture
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotculture")
+```
+:::
+:::
 
-5\. Better design, 
-<br>better statistics, 
-<br>better reporting
+::: {.sol-row}
+::: {.sol-text}
+Incentives
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotincentives")
+```
+:::
+:::
 
+::: {.sol-row}
+::: {.sol-text}
+Training
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plottraining")
+```
+:::
+:::
 
+::: {.sol-row}
+::: {.sol-text}
+Measurement validation
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotmeasurement")
+```
+:::
+:::
 
-6\. Culture, 
-<br>incentives, 
-<br>training
+::: {.sol-row}
+::: {.sol-text}
+Theory
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plottheory")
+```
+:::
+:::
 
+::: {.sol-row}
+::: {.sol-text}
+Multi-centre
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotmulticentre")
+```
+:::
+:::
 
+::: {.sol-row}
+::: {.sol-text}
+Multi-study
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotmultistudy")
+```
+:::
+:::
 
-7\. Other: 
-<br>measurement validation, 
-<br>theory, 
-<br>multi-centre, 
-<br>multi-study, 
-<br>meta-analysis
+::: {.sol-row}
+::: {.sol-text}
+Meta-analysis
+:::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotmetaanalysis")
+```
+:::
+:::
 
 
 :::
