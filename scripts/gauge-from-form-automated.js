@@ -25,6 +25,10 @@ const GAUGES = {
   plotBaker2016others:    { col: 14, label: 'Others',      showIQR: false  },
   plotBaker2016own:    { col: 15, label: 'Own',      showIQR: false  },
 };
+
+const BARS = {
+  plotanalysisascode:    { col: 16, label: '',      showIQR: false  },
+};
 // =====================================================================
 
 const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${GID}`;

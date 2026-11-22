@@ -574,7 +574,7 @@ font-feature-settings: "liga";
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Pete Laver">
-  <meta name="dcterms.date" content="2026-11-21">
+  <meta name="dcterms.date" content="2026-11-22">
   <title>Introduction to R: Why code?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -872,43 +872,59 @@ transition: transform 0.8s ease-in-out;
 transform: translate(var(--dx), var(--dy));
 }
 
-.hl-step { position: absolute; width: 0; height: 0; overflow: hidden; }
-
 .cause { transition: color .3s, opacity .3s; }
 
 .hl-stage:has(.hl-step.current-fragment) .cause { opacity: .3; }
+.hl-stage .cause.on { opacity: 1; }
 
-.sol-label { display: none; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-sol~="1"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-prevent~="1"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-mitigate~="1"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-expose~="1"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-gap~="1"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-sol~="1"],
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] {
-color: #c45426; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] { display: block; }
-.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-sol~="2"] {
-color: #ffb217; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .sol-label[data-sol="2"] { display: block; color: #ffb217; }
-.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-sol~="3"] {
-color: #2d2d2e; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .sol-label[data-sol="3"] { display: block; color: #2d2d2e; }
-.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-sol~="4"] {
-color: #b3382b; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .sol-label[data-sol="4"] { display: block; color: #b3382b; }
-.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-sol~="5"] {
-color: #f48c1f; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .sol-label[data-sol="5"] { display: block; color: #f48c1f; }
-.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-sol~="6"] {
-color: #c45426; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .sol-label[data-sol="6"] { display: block; color: #c45426; }
-.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-sol~="7"] {
-color: #ffb217; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .sol-label[data-sol="7"] { display: block; color: #ffb217; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-sol~="2"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-prevent~="2"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-mitigate~="2"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-expose~="2"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-gap~="2"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-sol~="3"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-prevent~="3"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-mitigate~="3"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-expose~="3"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-gap~="3"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-sol~="4"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-prevent~="4"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-mitigate~="4"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-expose~="4"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-gap~="4"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-sol~="5"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-prevent~="5"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-mitigate~="5"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-expose~="5"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-gap~="5"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-sol~="6"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-prevent~="6"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-mitigate~="6"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-expose~="6"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-gap~="6"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-sol~="7"] { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-prevent~="7"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-mitigate~="7"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-expose~="7"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 </style>
   <style type="text/css">.reveal
 div.sourceCode
@@ -2919,6 +2935,7 @@ const GAUGES = {
   plotCobey2023education:    { col: 13, label: 'Education',      showIQR: false  },
   plotBaker2016others:    { col: 14, label: 'Others',      showIQR: false  },
   plotBaker2016own:    { col: 15, label: 'Own',      showIQR: false  },
+  plotanalysisascode:    { col: 16, label: '',      showIQR: false  },
 };
 // =====================================================================
 
@@ -3220,7 +3237,7 @@ Pete Laver
 </div>
 </div>
 
-  <p class="date">2026-11-21</p>
+  <p class="date">2026-11-22</p>
 </section>
 <section id="personal-experience" class="slide level2">
 <h2>Personal experience</h2>
@@ -3862,118 +3879,118 @@ display:block!important;
 <div class="columns">
 <div class="column" style="width:25%;">
 <div class="fragment">
-<p><b>Statistical &amp; design</b></p>
+<p><b>Statistics, design</b></p>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3 5">Low statistical power</span></li>
+<li><span class="cause" data-prevent="5" data-mitigate="3">Low statistical power</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 2 3">Researcher degrees of freedom / analytic flexibility</span></li>
+<li><span class="cause" data-expose="1 2" data-mitigate="3">Researcher degrees of freedom / analytic flexibility</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3"><em>p</em>-hacking</span></li>
+<li><span class="cause" data-mitigate="3"><em>p</em>-hacking</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="2 3">HARKing</span></li>
+<li><span class="cause" data-prevent="3" data-expose="2">HARKing</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="5">Misuse and misinterpretation of <em>p</em>-values</span></li>
+<li><span class="cause" data-mitigate="5">Misuse and misinterpretation of <em>p</em>-values</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 5">Pseudoreplication</span></li>
+<li><span class="cause" data-expose="1" data-prevent="5">Pseudoreplication</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 5">Unit-of-analysis errors</span></li>
+<li><span class="cause" data-expose="1" data-prevent="5">Unit-of-analysis errors</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="5">Low prior probability</span></li>
+<li><span class="cause" data-mitigate="5">Low prior probability</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="5">Analytic variability</span></li>
+<li><span class="cause" data-expose="1" data-mitigate="5">Analytic variability</span></li>
 </ul>
 </div>
 <div class="fragment">
-<p><b>Publication &amp; reporting</b></p>
+<p><b>Publication, reporting</b></p>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3 6">File drawer problem</span></li>
+<li><span class="cause" data-mitigate="3 6">File drawer problem</span></li>
 </ul>
 </div>
 </div><div class="column" style="width:25%;">
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3">Publication bias</span></li>
+<li><span class="cause" data-mitigate="3 6">Publication bias</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="2 3">Outcome switching</span></li>
+<li><span class="cause" data-prevent="3" data-expose="2">Outcome switching</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3 5">Selective outcome reporting</span></li>
+<li><span class="cause" data-prevent="3" data-mitigate="5">Selective outcome reporting</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="3 5">Spin &amp; positive-result inflation</span></li>
+<li><span class="cause" data-mitigate="3 5">Spin &amp; positive-result inflation</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 4">Reporting errors</span></li>
+<li><span class="cause" data-prevent="1" data-expose="4">Reporting errors</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 4 5">Insufficient methodological detail</span></li>
+<li><span class="cause" data-mitigate="1 4 5">Insufficient methodological detail</span></li>
 </ul>
 </div>
 <div class="fragment">
-<p><b>Incentives &amp; culture</b></p>
+<p><b>Incentives, culture</b></p>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="6">Publish or perish</span></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><span class="cause" data-sol="3 6">Novelty bias</span></li>
+<li><span class="cause" data-mitigate="6">Publish or perish</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="6">Questionable research practices</span></li>
+<li><span class="cause" data-mitigate="3 6">Novelty bias</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="4">Fraud</span></li>
+<li><span class="cause" data-mitigate="6">Questionable research practices</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="6">Poor training &amp; mentoring</span></li>
+<li><span class="cause" data-expose="4">Fraud</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><span class="cause" data-mitigate="6">Poor training &amp; mentoring</span></li>
 </ul>
 </div>
 </div><div class="column" style="width:25%;">
@@ -3982,27 +3999,27 @@ display:block!important;
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="4">Data &amp; code not shared</span></li>
+<li><span class="cause" data-prevent="4">Data &amp; code not shared</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="2 4">Code that doesn’t run</span></li>
+<li><span class="cause" data-mitigate="2" data-expose="4">Code that doesn’t run</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1 2">Undocumented analysis steps</span></li>
+<li><span class="cause" data-prevent="1 2">Undocumented analysis steps</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="1">Manual, untraceable edits</span></li>
+<li><span class="cause" data-prevent="1">Manual, untraceable edits</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="4">Quality of materials &amp; reagents</span></li>
+<li><span class="cause" data-mitigate="4">Quality of materials &amp; reagents</span></li>
 </ul>
 </div>
 <div class="fragment">
@@ -4010,22 +4027,22 @@ display:block!important;
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="7">Poor measurement validity</span></li>
+<li><span class="cause" data-gap="7">Poor measurement validity</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="7">Weak theory</span></li>
+<li><span class="cause" data-gap="7">Weak theory</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="5">Hidden / lurking variables (confounders)</span></li>
+<li><span class="cause" data-mitigate="5">Hidden / lurking variables (confounders)</span></li>
 </ul>
 </div>
 <div class="fragment">
 <ul>
-<li><span class="cause" data-sol="7">True heterogeneity</span></li>
+<li><span class="cause" data-gap="7">True heterogeneity</span></li>
 </ul>
 </div>
 </div><div class="column" style="width:25%;">
@@ -4066,6 +4083,21 @@ display:block!important;
 <ol start="7" type="1">
 <li><span class="cause" data-sol="7">Other</span></li>
 </ol>
+</div>
+<div class="fragment">
+<p><br> <br> <b>Impact</b></p>
+</div>
+<div class="fragment">
+<p><span class="cause" data-prevent="1 2 3 4 5 6 7">Prevents</span></p>
+</div>
+<div class="fragment">
+<p><span class="cause" data-mitigate="1 2 3 4 5 6 7">Mitigates</span></p>
+</div>
+<div class="fragment">
+<p><span class="cause" data-expose="1 2 3 4 5 6 7">Exposes</span></p>
+</div>
+<div class="fragment">
+<p><span class="cause" data-gap="1 2 3 4 5 6 7">Needs other work</span></p>
 </div>
 <div class="hl-step fragment current-visible" data-sol="1">
 
@@ -4120,25 +4152,48 @@ display:block!important;
 </div>
 <div class="takehome-card">
 <div class="fragment">
-<ul>
-<li>…</li>
-</ul>
+<p><b>Solutions</b></p>
 </div>
 <div class="fragment">
-<ul>
-<li>…</li>
-</ul>
+<ol type="1">
+<li>Analsysis as code</li>
+</ol>
 </div>
 <div class="fragment">
-<ul>
-<li>…</li>
-</ul>
+<ol start="2" type="1">
+<li>Version control, <br>environment management</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Preregistration</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Open data, <br>open code, <br>open materials</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="5" type="1">
+<li>Better design, <br>better statistics, <br>better reporting</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="6" type="1">
+<li>Culture, <br>incentives, <br>training</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="7" type="1">
+<li>Other: <br>measurement validation, <br>theory, <br>multi-centre, <br>multi-study, <br>meta-analysis</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>.</p>
+<p>Let’s discuss what lies within our sphere of influence and what lies outside of it.</p>
 <style type="text/css">
 span.MJX_Assistive_MathML {
 position:absolute!important;
@@ -4157,6 +4212,12 @@ display:block!important;
 </section>
 <section id="why-code" class="slide level2">
 <h2>Why code?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="plotanalysisascode" style="width:100%;height:470px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"series":[{"data":[{"value":0,"name":"."}],"type":"gauge","min":0,"max":100,"startAngle":90,"endAngle":-270,"center":["50%","60%"],"progress":{"show":true,"width":32,"itemStyle":{"color":"#c45426"}},"axisLine":{"lineStyle":{"width":32,"color":[[1,"#c4542620"]]}},"pointer":{"show":false},"axisTick":{"show":false},"splitLine":{"show":false},"axisLabel":{"show":false},"title":{"show":true,"fontSize":40,"fontWeight":"bold","color":"#4a5568","offsetCenter":[0,"20%"]},"detail":{"valueAnimation":true,"formatter":"{value}%","offsetCenter":[0,"-20%"],"fontSize":50},"animation":true}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 <div class="fragment">
 <div class="center-container">
 <div class="icon-wrapper">
@@ -4410,7 +4471,7 @@ display:block!important;
 </div>
 </section>
 <section id="what-can-code-not-fix" class="slide level2">
-<h2>What can code not fix?</h2>
+<h2>What can code NOT fix?</h2>
 <div class="fragment">
 <div class="center-container">
 <div class="icon-wrapper">
@@ -4519,7 +4580,7 @@ display:block!important;
 </div>
 </section>
 <section id="r-as-part-of-an-ecosystem" class="slide level2">
-<h2>R as part of an ecosystem?</h2>
+<h2>R as part of an ecosystem</h2>
 <p>…</p>
 <aside class="notes">
 <p>R fits well into a broader ecosystem whereby analysis code (R) sits alongside presentation code (LaTeX, Quarto, md, etc) so that code, output, text, figures all sit within a single document that can produce reports, journal articles, presentations, web pages, and several other output formats.</p>

@@ -299,62 +299,72 @@
 
 
 
-/* markers take no space and show nothing */
-.hl-step { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+
 
 /* base state for all items */
 .cause { transition: color .3s, opacity .3s; }
-
+                      
 /* when any solution is active, dim everything */
 .hl-stage:has(.hl-step.current-fragment) .cause { opacity: .3; }
 
-/* labels hidden unless their solution is active */
-.sol-label { display: none; }
+.hl-stage .cause.on { opacity: 1; }
 
-/* --- one block per solution --- */
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-sol~="1"],
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] {
-  color: #c45426; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .sol-label[data-sol="1"] { 
-  display: block; }
+/* ================= SOLUTION 1 ================= */
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-sol~="1"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-prevent~="1"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-mitigate~="1"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-expose~="1"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="1"].current-fragment) .cause[data-gap~="1"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  
+/* ================= SOLUTION 2 ================= */
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-sol~="2"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-prevent~="2"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-mitigate~="2"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-expose~="2"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-gap~="2"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
-.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .cause[data-sol~="2"] {
-  color: #ffb217; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="2"].current-fragment) .sol-label[data-sol="2"] { 
-  display: block; color: #ffb217; }
-  
-  .hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-sol~="3"] {
-  color: #2d2d2e; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .sol-label[data-sol="3"] { 
-  display: block; color: #2d2d2e; }
-  
-  .hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-sol~="4"] {
-  color: #b3382b; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .sol-label[data-sol="4"] { 
-  display: block; color: #b3382b; }
-  
-  .hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-sol~="5"] {
-  color: #f48c1f; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .sol-label[data-sol="5"] { 
-  display: block; color: #f48c1f; }
-  
-  .hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-sol~="6"] {
-  color: #c45426; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .sol-label[data-sol="6"] { 
-  display: block; color: #c45426; }
-  
-    .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-sol~="7"] {
-  color: #ffb217; opacity: 1; font-weight: 700;
-}
-.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .sol-label[data-sol="7"] { 
-  display: block; color: #ffb217; }
-  
+/* ================= SOLUTION 3 ================= */
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-sol~="3"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-prevent~="3"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-mitigate~="3"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-expose~="3"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="3"].current-fragment) .cause[data-gap~="3"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ================= SOLUTION 4 ================= */
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-sol~="4"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-prevent~="4"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-mitigate~="4"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-expose~="4"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="4"].current-fragment) .cause[data-gap~="4"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ================= SOLUTION 5 ================= */
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-sol~="5"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-prevent~="5"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-mitigate~="5"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-expose~="5"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="5"].current-fragment) .cause[data-gap~="5"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ================= SOLUTION 6 ================= */
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-sol~="6"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-prevent~="6"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-mitigate~="6"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-expose~="6"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="6"].current-fragment) .cause[data-gap~="6"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* ================= SOLUTION 7 ================= */
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) { --c: #c45426; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-sol~="7"]     { color: var(--c); opacity: 1; font-weight: 700; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-prevent~="7"] { opacity: 1; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-mitigate~="7"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-expose~="7"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   
 
 

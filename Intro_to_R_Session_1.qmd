@@ -714,40 +714,40 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.column width="25%"}
 
 ::: {.fragment}
-<b>Statistical & design</b>
+<b>Statistics, design</b>
 :::
 ::: {.fragment}
-- [Low statistical power]{.cause data-sol="3 5"}
+- [Low statistical power]{.cause data-prevent="5" data-mitigate="3"}
 :::
 ::: {.fragment}
-- [Researcher degrees of freedom / analytic flexibility]{.cause data-sol="1 2 3"}
+- [Researcher degrees of freedom / analytic flexibility]{.cause data-expose="1 2" data-mitigate="3"}
 :::
 ::: {.fragment}
-- [<em>p</em>-hacking]{.cause data-sol="3"}
+- [<em>p</em>-hacking]{.cause data-mitigate="3"}
 :::
 ::: {.fragment}
-- [HARKing]{.cause data-sol="2 3"}
+- [HARKing]{.cause data-prevent="3" data-expose="2"}
 :::
 ::: {.fragment}
-- [Misuse and misinterpretation of <em>p</em>-values]{.cause data-sol="5"}
+- [Misuse and misinterpretation of <em>p</em>-values]{.cause data-mitigate="5"}
 :::
 ::: {.fragment}
-- [Pseudoreplication]{.cause data-sol="1 5"}
+- [Pseudoreplication]{.cause data-expose="1" data-prevent="5"}
 :::
 ::: {.fragment}
-- [Unit-of-analysis errors]{.cause data-sol="1 5"}
+- [Unit-of-analysis errors]{.cause data-expose="1" data-prevent="5"}
 :::
 ::: {.fragment}
-- [Low prior probability]{.cause data-sol="5"}
+- [Low prior probability]{.cause data-mitigate="5"}
 :::
 ::: {.fragment}
-- [Analytic variability]{.cause data-sol="5"}
+- [Analytic variability]{.cause data-expose="1" data-mitigate="5"}
 :::
 ::: {.fragment}
-<b>Publication & reporting</b>
+<b>Publication, reporting</b>
 :::
 ::: {.fragment}
-- [File drawer problem]{.cause data-sol="3 6"}
+- [File drawer problem]{.cause data-mitigate="3 6"}
 :::
 
 :::
@@ -755,40 +755,40 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.column width="25%"}
 
 ::: {.fragment}
-- [Publication bias]{.cause data-sol="3"}
+- [Publication bias]{.cause data-mitigate="3 6"}
 :::
 ::: {.fragment}
-- [Outcome switching]{.cause data-sol="2 3"}
+- [Outcome switching]{.cause data-prevent="3" data-expose="2"}
 :::
 ::: {.fragment}
-- [Selective outcome reporting]{.cause data-sol="3 5"}
+- [Selective outcome reporting]{.cause data-prevent="3" data-mitigate="5"}
 :::
 ::: {.fragment}
-- [Spin & positive-result inflation]{.cause data-sol="3 5"}
+- [Spin & positive-result inflation]{.cause data-mitigate="3 5"}
 :::
 ::: {.fragment}
-- [Reporting errors]{.cause data-sol="1 4"}
+- [Reporting errors]{.cause data-prevent="1" data-expose="4"}
 :::
 ::: {.fragment}
-- [Insufficient methodological detail]{.cause data-sol="1 4 5"}
+- [Insufficient methodological detail]{.cause data-mitigate="1 4 5"}
 :::
 ::: {.fragment}
-<b>Incentives & culture</b>
+<b>Incentives, culture</b>
 :::
 ::: {.fragment}
-- [Publish or perish]{.cause data-sol="6"}
+- [Publish or perish]{.cause data-mitigate="6"}
 :::
 ::: {.fragment}
-- [Novelty bias]{.cause data-sol="3 6"}
+- [Novelty bias]{.cause data-mitigate="3 6"}
 :::
 ::: {.fragment}
-- [Questionable research practices]{.cause data-sol="6"}
+- [Questionable research practices]{.cause data-mitigate="6"}
 :::
 ::: {.fragment}
-- [Fraud]{.cause data-sol="4"}
+- [Fraud]{.cause data-expose="4"}
 :::
 ::: {.fragment}
-- [Poor training & mentoring]{.cause data-sol="6"}
+- [Poor training & mentoring]{.cause data-mitigate="6"}
 :::
 
 :::
@@ -800,34 +800,34 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Transparency, infrastructure</b>
 :::
 ::: {.fragment}
-- [Data & code not shared]{.cause data-sol="4"}
+- [Data & code not shared]{.cause data-prevent="4"}
 :::
 ::: {.fragment}
-- [Code that doesn't run]{.cause data-sol="2 4"}
+- [Code that doesn't run]{.cause data-mitigate="2" data-expose="4"}
 :::
 ::: {.fragment}
-- [Undocumented analysis steps]{.cause data-sol="1 2"}
+- [Undocumented analysis steps]{.cause data-prevent="1 2"}
 :::
 ::: {.fragment}
-- [Manual, untraceable edits]{.cause data-sol="1"}
+- [Manual, untraceable edits]{.cause data-prevent="1"}
 :::
 ::: {.fragment}
-- [Quality of materials & reagents]{.cause data-sol="4"}
+- [Quality of materials & reagents]{.cause data-mitigate="4"}
 :::
 ::: {.fragment}
 <b>Other</b>
 :::
 ::: {.fragment}
-- [Poor measurement validity]{.cause data-sol="7"}
+- [Poor measurement validity]{.cause data-gap="7"}
 :::
 ::: {.fragment}
-- [Weak theory]{.cause data-sol="7"}
+- [Weak theory]{.cause data-gap="7"}
 :::
 ::: {.fragment}
-- [Hidden / lurking variables (confounders)]{.cause data-sol="5"}
+- [Hidden / lurking variables (confounders)]{.cause data-mitigate="5"}
 :::
 ::: {.fragment}
-- [True heterogeneity]{.cause data-sol="7"}
+- [True heterogeneity]{.cause data-gap="7"}
 :::
 
 :::
@@ -859,6 +859,23 @@ African Brain Child | Neurosciences Institute | UCT
 ::: {.fragment}
 7. [Other]{.cause data-sol="7"}
 :::
+::: {.fragment}
+<br>
+<br>
+<b>Impact</b>
+:::
+::: {.fragment}
+[Prevents]{.cause data-prevent="1 2 3 4 5 6 7"}
+:::
+::: {.fragment}
+[Mitigates]{.cause data-mitigate="1 2 3 4 5 6 7"}
+:::
+::: {.fragment}
+[Exposes]{.cause data-expose="1 2 3 4 5 6 7"}
+:::
+::: {.fragment}
+[Needs other work]{.cause data-gap="1 2 3 4 5 6 7"}
+:::
 ::: {.hl-step .fragment .current-visible data-sol="1"}
 :::
 ::: {.hl-step .fragment .current-visible data-sol="2"}
@@ -873,6 +890,10 @@ African Brain Child | Neurosciences Institute | UCT
 :::
 ::: {.hl-step .fragment .current-visible data-sol="7"}
 :::
+
+
+
+
 
 :::
 
@@ -909,20 +930,47 @@ African Brain Child | Neurosciences Institute | UCT
 :::
 ::: {.takehome-card}
 ::: {.fragment}
-- ...
+<b>Solutions</b>
 :::
 ::: {.fragment}
-- ...
+1. Analsysis as code
 :::
 ::: {.fragment}
-- ...
+2. Version control, 
+<br>environment management
+:::
+::: {.fragment}
+3. Preregistration
+:::
+::: {.fragment}
+4. Open data, 
+<br>open code, 
+<br>open materials
+:::
+::: {.fragment}
+5. Better design, 
+<br>better statistics, 
+<br>better reporting
+:::
+::: {.fragment}
+6. Culture, 
+<br>incentives, 
+<br>training
+:::
+::: {.fragment}
+7. Other: 
+<br>measurement validation, 
+<br>theory, 
+<br>multi-centre, 
+<br>multi-study, 
+<br>meta-analysis
 :::
 :::
 :::
 :::
 
 ::: {.notes}
-.
+Let's discuss what lies within our sphere of influence and what lies outside of it. 
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -937,6 +985,10 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 ## Why code?
+
+```{r}
+live_gauge("plotanalysisascode")
+```
 
 ::: {.fragment}
 ::: {.center-container}
@@ -1161,7 +1213,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## What can code not fix?
+## What can code NOT fix?
 
 ::: {.fragment}
 ::: {.center-container}
@@ -1249,7 +1301,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## R as part of an ecosystem?
+## R as part of an ecosystem
 
 ...
 
