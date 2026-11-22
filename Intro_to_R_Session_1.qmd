@@ -934,7 +934,7 @@ African Brain Child | Neurosciences Institute | UCT
 <b>Solutions</b>
 
 
-::: {.sol-row data-gauge="plotanalysisascode"}
+::: {.sol-row}
 ::: {.sol-text}
 1\. Analysis as code
 :::
