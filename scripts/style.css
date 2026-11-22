@@ -366,5 +366,16 @@
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-expose~="7"]  { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"]     { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   
+.sol-row {
+  display: flex;
+  align-items: center;          /* bar centred against multi-line text */
+  justify-content: space-between;
+  gap: 1.5em;
+  margin: .3em 0;
+}
+.sol-text { flex: 1 1 auto; text-align: left; }
+.sol-bar  { flex: 0 0 420px; }  /* the fixed slot: same width and right edge on every row */
+.sol-bar > div { width: 100% !important; }
+
 
 

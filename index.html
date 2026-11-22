@@ -925,6 +925,16 @@ transform: translate(var(--dx), var(--dy));
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-mitigate~="7"]{ opacity: 0.7; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-expose~="7"] { opacity: 0.4; font-weight: 700; color: #fff; background: var(--c); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.sol-row {
+display: flex;
+align-items: center; 
+justify-content: space-between;
+gap: 1.5em;
+margin: .3em 0;
+}
+.sol-text { flex: 1 1 auto; text-align: left; }
+.sol-bar { flex: 0 0 420px; } 
+.sol-bar > div { width: 100% !important; }
 </style>
   <style type="text/css">.reveal
 div.sourceCode
@@ -2935,8 +2945,30 @@ const GAUGES = {
   plotCobey2023education:    { col: 13, label: 'Education',      showIQR: false  },
   plotBaker2016others:    { col: 14, label: 'Others',      showIQR: false  },
   plotBaker2016own:    { col: 15, label: 'Own',      showIQR: false  },
-  plotanalysisascode:    { col: 16, label: '',      showIQR: false  },
 };
+
+const BARS = {
+  plotanalysisascode:    { col: 16, label: '',      showIQR: false  },
+  plotversioncontrol:    { col: 17, label: '',      showIQR: false  },
+  plotenvmgt:    { col: 18, label: '',      showIQR: false  },
+  plotpreregistration:    { col: 19, label: '',      showIQR: false  },
+  plotopendata:    { col: 20, label: '',      showIQR: false  },
+  plotopencode:    { col: 21, label: '',      showIQR: false  },
+  plotopenmaterials:    { col: 22, label: '',      showIQR: false  },
+  plotbetterdesign:    { col: 23, label: '',      showIQR: false  },
+  plotbetterstatistics:    { col: 24, label: '',      showIQR: false  },
+  plotbetterreporting:    { col: 25, label: '',      showIQR: false  },
+  plotculture:    { col: 26, label: '',      showIQR: false  },
+  plotincentives:    { col: 27, label: '',      showIQR: false  },
+  plottraining:    { col: 28, label: '',      showIQR: false  },
+  plotmeasurement:    { col: 29, label: '',      showIQR: false  },
+  plottheory:    { col: 30, label: '',      showIQR: false  },
+  plotmulticentre:    { col: 31, label: '',      showIQR: false  },
+  plotmultistudy:    { col: 32, label: '',      showIQR: false  },
+  plotmetaanalysis:    { col: 33, label: '',      showIQR: false  },
+};
+
+const CHARTS = { ...GAUGES, ...BARS };
 // =====================================================================
 
 const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${GID}`;
@@ -2982,7 +3014,7 @@ async function fetchAll() {
     const headers = rows[0] || [];
     const data = rows.slice(1);
     const out = {};
-    for (const [id, cfg] of Object.entries(GAUGES)) {
+    for (const [id, cfg] of Object.entries(CHARTS)) {
       const ci = resolveCol(headers, cfg.col);
       if (ci < 0) { console.warn(`No column matching "${cfg.col}" for ${id}`); continue; }
       const vals = data.map(r => parseFloat(r[ci])).filter(v => !isNaN(v) && v >= 0 && v <= 100);
@@ -3020,7 +3052,7 @@ function refreshStats() {
 
 // ---------- DOM / chart helpers ----------
 function gaugesOnSlide(slide) {
-  return Object.keys(GAUGES).filter(id => {
+  return Object.keys(CHARTS).filter(id => {
     const el = document.getElementById(id);
     return el && slide.contains(el);
   });
@@ -3036,7 +3068,7 @@ function setCaption(id, stats) {
   const el = document.getElementById(id);
   if (!el) return;
 
-  const show = GAUGES[id]?.showIQR ?? true;     // defaults to shown if omitted
+  const show = CHARTS[id]?.showIQR ?? true;     // defaults to shown if omitted
   let cap = document.getElementById('cap-' + id);
 
   if (!show) {                                  // hidden: remove any existing caption
@@ -3075,7 +3107,7 @@ function replay(id) {
 
   const stats = statsById[id];
   const opts = get_e_charts_opts(id);
-  withValue(opts, stats?.median, GAUGES[id].label);
+  withValue(opts, stats?.median, CHARTS[id].label);
   chart.setOption(opts, true);
   setCaption(id, stats);
 }
@@ -3086,7 +3118,7 @@ function applyStats(id) {
   const stats = statsById[id];
   if (!chart || !stats) return;
   const current = (chart.getOption().series[0].data || [])[0]?.name;
-  const name = GAUGES[id].label ?? current;        // falls back to existing name if no label set
+  const name = CHARTS[id].label ?? current;        // falls back to existing name if no label set
   chart.setOption({ series: [{ data: [{ name, value: stats.median }] }] });
   setCaption(id, stats);
 }
@@ -3203,7 +3235,7 @@ window.addEventListener('load', function () {
 
     const ids = raw.split(',').map(s => s.trim()).filter(Boolean);
     ids.forEach(id => {
-      if (GAUGES[id]) {
+      if (CHARTS[id]) {
         activateGauge(id, runId);
       }
     });
@@ -4154,10 +4186,18 @@ display:block!important;
 <div class="fragment">
 <p><b>Solutions</b></p>
 </div>
-<div class="fragment">
-<ol type="1">
-<li>Analsysis as code</li>
-</ol>
+<div class="fragment sol-row" data-gauge="plotanalysisascode">
+<div class="sol-text">
+<p>1. Analysis as code</p>
+</div>
+<div class="sol-bar">
+<div class="cell">
+<div class="cell-output-display">
+<div id="plotanalysisascode" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
 </div>
 <div class="fragment">
 <ol start="2" type="1">
@@ -4214,8 +4254,8 @@ display:block!important;
 <h2>Why code?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotanalysisascode" style="width:100%;height:470px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"series":[{"data":[{"value":0,"name":"."}],"type":"gauge","min":0,"max":100,"startAngle":90,"endAngle":-270,"center":["50%","60%"],"progress":{"show":true,"width":32,"itemStyle":{"color":"#c45426"}},"axisLine":{"lineStyle":{"width":32,"color":[[1,"#c4542620"]]}},"pointer":{"show":false},"axisTick":{"show":false},"splitLine":{"show":false},"axisLabel":{"show":false},"title":{"show":true,"fontSize":40,"fontWeight":"bold","color":"#4a5568","offsetCenter":[0,"20%"]},"detail":{"valueAnimation":true,"formatter":"{value}%","offsetCenter":[0,"-20%"],"fontSize":50},"animation":true}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotanalysisascode" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="fragment">

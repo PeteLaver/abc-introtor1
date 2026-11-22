@@ -47,3 +47,27 @@ live_bar <- function(id, value = 0, name = ".", color = "#c45426",
       ))
     ))
 }
+
+row_bar <- function(id, value = 0, color = "#c45426",
+                    height = "70px", bar_width = 36) {
+  e_charts(elementId = id, width = "100%", height = height) |>
+    e_list(list(
+      animation = TRUE,
+      grid = list(left = 0, right = 100, top = 0, bottom = 0),
+      xAxis = list(type = "value", min = 0, max = 100, show = FALSE),
+      yAxis = list(type = "category", data = list(""), show = FALSE),
+      series = list(list(
+        type = "bar",
+        data = list(value),
+        barWidth = bar_width,
+        showBackground = TRUE,
+        backgroundStyle = list(color = "#c4542620", borderRadius = 6),
+        itemStyle = list(color = color, borderRadius = 6),
+        label = list(
+          show = TRUE, position = "right", distance = 10,
+          valueAnimation = TRUE, formatter = "{c}%",
+          fontSize = 30, fontWeight = "bold", color = "#4a5568"
+        )
+      ))
+    ))
+}

@@ -929,34 +929,50 @@ African Brain Child | Neurosciences Institute | UCT
 {{< mi edit_note size=60px >}}
 :::
 ::: {.takehome-card}
+
 ::: {.fragment}
 <b>Solutions</b>
 :::
-::: {.fragment}
-1. Analsysis as code
+
+::: {.fragment .sol-row data-gauge="plotanalysisascode"}
+::: {.sol-text}
+1\. Analysis as code
 :::
+::: {.sol-bar}
+```{r}
+#| echo: false
+row_bar("plotanalysisascode")
+```
+:::
+:::
+
 ::: {.fragment}
 2. Version control, 
 <br>environment management
 :::
+
 ::: {.fragment}
 3. Preregistration
 :::
+
 ::: {.fragment}
 4. Open data, 
 <br>open code, 
 <br>open materials
 :::
+
 ::: {.fragment}
 5. Better design, 
 <br>better statistics, 
 <br>better reporting
 :::
+
 ::: {.fragment}
 6. Culture, 
 <br>incentives, 
 <br>training
 :::
+
 ::: {.fragment}
 7. Other: 
 <br>measurement validation, 
@@ -965,6 +981,7 @@ African Brain Child | Neurosciences Institute | UCT
 <br>multi-study, 
 <br>meta-analysis
 :::
+
 :::
 :::
 :::
@@ -987,7 +1004,7 @@ African Brain Child | Neurosciences Institute | UCT
 ## Why code?
 
 ```{r}
-live_gauge("plotanalysisascode")
+row_bar("plotanalysisascode")
 ```
 
 ::: {.fragment}

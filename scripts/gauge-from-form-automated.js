@@ -28,7 +28,26 @@ const GAUGES = {
 
 const BARS = {
   plotanalysisascode:    { col: 16, label: '',      showIQR: false  },
+  plotversioncontrol:    { col: 17, label: '',      showIQR: false  },
+  plotenvmgt:    { col: 18, label: '',      showIQR: false  },
+  plotpreregistration:    { col: 19, label: '',      showIQR: false  },
+  plotopendata:    { col: 20, label: '',      showIQR: false  },
+  plotopencode:    { col: 21, label: '',      showIQR: false  },
+  plotopenmaterials:    { col: 22, label: '',      showIQR: false  },
+  plotbetterdesign:    { col: 23, label: '',      showIQR: false  },
+  plotbetterstatistics:    { col: 24, label: '',      showIQR: false  },
+  plotbetterreporting:    { col: 25, label: '',      showIQR: false  },
+  plotculture:    { col: 26, label: '',      showIQR: false  },
+  plotincentives:    { col: 27, label: '',      showIQR: false  },
+  plottraining:    { col: 28, label: '',      showIQR: false  },
+  plotmeasurement:    { col: 29, label: '',      showIQR: false  },
+  plottheory:    { col: 30, label: '',      showIQR: false  },
+  plotmulticentre:    { col: 31, label: '',      showIQR: false  },
+  plotmultistudy:    { col: 32, label: '',      showIQR: false  },
+  plotmetaanalysis:    { col: 33, label: '',      showIQR: false  },
 };
+
+const CHARTS = { ...GAUGES, ...BARS };
 // =====================================================================
 
 const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${GID}`;
@@ -74,7 +93,7 @@ async function fetchAll() {
     const headers = rows[0] || [];
     const data = rows.slice(1);
     const out = {};
-    for (const [id, cfg] of Object.entries(GAUGES)) {
+    for (const [id, cfg] of Object.entries(CHARTS)) {
       const ci = resolveCol(headers, cfg.col);
       if (ci < 0) { console.warn(`No column matching "${cfg.col}" for ${id}`); continue; }
       const vals = data.map(r => parseFloat(r[ci])).filter(v => !isNaN(v) && v >= 0 && v <= 100);
@@ -112,7 +131,7 @@ function refreshStats() {
 
 // ---------- DOM / chart helpers ----------
 function gaugesOnSlide(slide) {
-  return Object.keys(GAUGES).filter(id => {
+  return Object.keys(CHARTS).filter(id => {
     const el = document.getElementById(id);
     return el && slide.contains(el);
   });
@@ -128,7 +147,7 @@ function setCaption(id, stats) {
   const el = document.getElementById(id);
   if (!el) return;
 
-  const show = GAUGES[id]?.showIQR ?? true;     // defaults to shown if omitted
+  const show = CHARTS[id]?.showIQR ?? true;     // defaults to shown if omitted
   let cap = document.getElementById('cap-' + id);
 
   if (!show) {                                  // hidden: remove any existing caption
@@ -167,7 +186,7 @@ function replay(id) {
 
   const stats = statsById[id];
   const opts = get_e_charts_opts(id);
-  withValue(opts, stats?.median, GAUGES[id].label);
+  withValue(opts, stats?.median, CHARTS[id].label);
   chart.setOption(opts, true);
   setCaption(id, stats);
 }
@@ -178,7 +197,7 @@ function applyStats(id) {
   const stats = statsById[id];
   if (!chart || !stats) return;
   const current = (chart.getOption().series[0].data || [])[0]?.name;
-  const name = GAUGES[id].label ?? current;        // falls back to existing name if no label set
+  const name = CHARTS[id].label ?? current;        // falls back to existing name if no label set
   chart.setOption({ series: [{ data: [{ name, value: stats.median }] }] });
   setCaption(id, stats);
 }
@@ -295,7 +314,7 @@ window.addEventListener('load', function () {
 
     const ids = raw.split(',').map(s => s.trim()).filter(Boolean);
     ids.forEach(id => {
-      if (GAUGES[id]) {
+      if (CHARTS[id]) {
         activateGauge(id, runId);
       }
     });
