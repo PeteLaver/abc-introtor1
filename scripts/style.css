@@ -368,13 +368,20 @@
   
 .sol-row {
   display: flex;
-  align-items: center;          /* bar centred against multi-line text */
+  align-items: center;
   justify-content: space-between;
-  gap: 0.5em;
-  margin: .1em 0;
+  gap: 1em;
+  margin: 0;                 /* was .3em */
+  min-height: 0;
 }
-.sol-text { flex: 1 1 auto; text-align: left; }
-.sol-bar  { flex: 0 0 420px; }  /* the fixed slot: same width and right edge on every row */
+.sol-text {
+  flex: 1 1 auto;
+  text-align: left;
+  line-height: 1.15;         /* tighter, matters most for the multi-line rows */
+  margin: 0;
+}
+.sol-text p { margin: 0; }   /* Pandoc wraps text in <p>, which adds default margins */
+.sol-bar { flex: 0 0 360px; line-height: 0; }   /* line-height 0 removes the stray gap under the canvas */
 .sol-bar > div { width: 100% !important; }
 
 

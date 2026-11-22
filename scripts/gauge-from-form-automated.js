@@ -306,6 +306,10 @@ window.addEventListener('load', function () {
   Reveal.on('ready', e => {
     enterSlide(e.currentSlide);
   });
+  
+  if (Reveal.isReady()) {
+    setTimeout(() => enterSlide(Reveal.getCurrentSlide()), 500);
+  }
 
   Reveal.on('fragmentshown', event => {
     console.log('SHOWN:', event.fragment.dataset.gauge, 'currentSlide:', currentSlide?.id || currentSlide);

@@ -927,13 +927,20 @@ transform: translate(var(--dx), var(--dy));
 .hl-stage:has(.hl-step[data-sol="7"].current-fragment) .cause[data-gap~="7"] { opacity: 1; font-weight: 700; color: #c45426; background: color-mix(in srgb, var(--c) 20%, transparent); padding: 0 .3em; border-radius: .25em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .sol-row {
 display: flex;
-align-items: center; 
+align-items: center;
 justify-content: space-between;
-gap: 0.5em;
-margin: .1em 0;
+gap: 1em;
+margin: 0; 
+min-height: 0;
 }
-.sol-text { flex: 1 1 auto; text-align: left; }
-.sol-bar { flex: 0 0 420px; } 
+.sol-text {
+flex: 1 1 auto;
+text-align: left;
+line-height: 1.15; 
+margin: 0;
+}
+.sol-text p { margin: 0; } 
+.sol-bar { flex: 0 0 360px; line-height: 0; } 
 .sol-bar > div { width: 100% !important; }
 </style>
   <style type="text/css">.reveal
@@ -3227,6 +3234,10 @@ window.addEventListener('load', function () {
   Reveal.on('ready', e => {
     enterSlide(e.currentSlide);
   });
+  
+  if (Reveal.isReady()) {
+    setTimeout(() => enterSlide(Reveal.getCurrentSlide()), 500);
+  }
 
   Reveal.on('fragmentshown', event => {
     console.log('SHOWN:', event.fragment.dataset.gauge, 'currentSlide:', currentSlide?.id || currentSlide);
@@ -4190,8 +4201,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotanalysisascode" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotanalysisascode" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4203,8 +4214,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotversioncontrol" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotversioncontrol">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotversioncontrol" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotversioncontrol">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4216,8 +4227,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotenvmgt" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotenvmgt">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotenvmgt" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotenvmgt">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4229,8 +4240,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotpreregistration" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotpreregistration">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotpreregistration" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotpreregistration">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4242,8 +4253,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotopendata" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotopendata">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotopendata" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotopendata">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4255,8 +4266,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotopencode" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotopencode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotopencode" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotopencode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4268,8 +4279,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotopenmaterials" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotopenmaterials">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotopenmaterials" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotopenmaterials">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4281,8 +4292,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotdesign" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotdesign">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotdesign" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotdesign">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4294,8 +4305,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotstatistics" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotstatistics">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotstatistics" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotstatistics">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4307,8 +4318,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotreporting" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotreporting">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotreporting" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotreporting">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4320,8 +4331,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotculture" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotculture">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotculture" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotculture">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4333,8 +4344,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotincentives" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotincentives">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotincentives" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotincentives">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4346,8 +4357,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plottraining" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plottraining">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plottraining" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plottraining">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4359,8 +4370,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotmeasurement" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotmeasurement">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotmeasurement" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotmeasurement">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4372,8 +4383,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plottheory" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plottheory">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plottheory" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plottheory">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4385,8 +4396,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotmulticentre" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotmulticentre">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotmulticentre" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotmulticentre">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4398,8 +4409,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotmultistudy" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotmultistudy">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotmultistudy" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotmultistudy">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4411,8 +4422,8 @@ display:block!important;
 <div class="sol-bar">
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotmetaanalysis" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotmetaanalysis">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotmetaanalysis" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotmetaanalysis">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -4441,8 +4452,8 @@ display:block!important;
 <h2>Why code?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="plotanalysisascode" style="width:100%;height:70px;" class="echarts4r html-widget"></div>
-<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":100,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":36,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":6},"itemStyle":{"color":"#c45426","borderRadius":6},"label":{"show":true,"position":"right","distance":10,"valueAnimation":true,"formatter":"{c}%","fontSize":30,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div id="plotanalysisascode" style="width:100%;height:44px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="plotanalysisascode">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"animation":true,"grid":{"left":0,"right":80,"top":0,"bottom":0},"xAxis":{"type":"value","min":0,"max":100,"show":false},"yAxis":{"type":"category","data":[""],"show":false},"series":[{"type":"bar","data":[0],"barWidth":24,"showBackground":true,"backgroundStyle":{"color":"#c4542620","borderRadius":5},"itemStyle":{"color":"#c45426","borderRadius":5},"label":{"show":true,"position":"right","distance":8,"valueAnimation":true,"formatter":"{c}%","fontSize":22,"fontWeight":"bold","color":"#4a5568"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="fragment">
