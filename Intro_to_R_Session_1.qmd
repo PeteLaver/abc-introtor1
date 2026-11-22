@@ -923,18 +923,18 @@ African Brain Child | Neurosciences Institute | UCT
 
 ## What can we do?
 
-::: {.fragment}
+
 ::: {.center-container}
 ::: {.icon-wrapper}
 {{< mi edit_note size=60px >}}
 :::
 ::: {.takehome-card}
 
-::: {.fragment}
-<b>Solutions</b>
-:::
 
-::: {.fragment .sol-row data-gauge="plotanalysisascode"}
+<b>Solutions</b>
+
+
+::: {.sol-row data-gauge="plotanalysisascode"}
 ::: {.sol-text}
 1\. Analysis as code
 :::
@@ -946,45 +946,45 @@ row_bar("plotanalysisascode")
 :::
 :::
 
-::: {.fragment}
+
 2. Version control, 
 <br>environment management
-:::
 
-::: {.fragment}
+
+
 3. Preregistration
-:::
 
-::: {.fragment}
+
+
 4. Open data, 
 <br>open code, 
 <br>open materials
-:::
 
-::: {.fragment}
+
+
 5. Better design, 
 <br>better statistics, 
 <br>better reporting
-:::
 
-::: {.fragment}
+
+
 6. Culture, 
 <br>incentives, 
 <br>training
-:::
 
-::: {.fragment}
+
+
 7. Other: 
 <br>measurement validation, 
 <br>theory, 
 <br>multi-centre, 
 <br>multi-study, 
 <br>meta-analysis
-:::
+
 
 :::
 :::
-:::
+
 
 ::: {.notes}
 Let's discuss what lies within our sphere of influence and what lies outside of it. 
