@@ -58,7 +58,7 @@ format:
 
 mydata <- c(33,70,80,43,81,34,93,47,33,75)
 median_val <- median(mydata)
-iqr_vals <- IQR(mydata,type=7)
+iqr_vals <- quantile(mydata,probs=c(0.25,0.75),type=7)
 n_obs <- length(mydata)
 
 ```
