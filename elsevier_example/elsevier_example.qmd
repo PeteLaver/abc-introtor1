@@ -59,6 +59,7 @@ format:
 mydata <- c(33,70,80,43,81,34,93,47,33,75)
 median_val <- median(mydata)
 iqr_vals <- IQR(mydata,type=7)
+n_obs <- length(mydata)
 
 ```
 
