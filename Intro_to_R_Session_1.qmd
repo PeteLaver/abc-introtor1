@@ -151,6 +151,11 @@ qr <- qr_code("https://docs.google.com/forms/d/e/1FAIpQLScoCB8qP_F7_PQibXlbrCcta
 plot(qr)
 ```
 
+
+
+<center><a href="https://docs.google.com/forms/d/e/1FAIpQLScoCB8qP_F7_PQibXlbrCcta610dhzCR0mNN62F40K2f-iTGQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">https://tinyurl.com/4a3wwxpe</a></center>
+
+
 ::: {.notes}
 
 :::
