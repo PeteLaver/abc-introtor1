@@ -1649,7 +1649,7 @@ Who helps, and who maintains it?
 **Community**
 :::
 ::: {.eco-tools}
-R Core Team, Stack Overflow, rOpenSci, user groups, GitHub issues, Posit Community
+R Core Team, Stack Overflow, rOpenSci, user groups, GitHub issues, Posit Community, Posit
 :::
 :::
 :::
