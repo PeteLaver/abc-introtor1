@@ -1994,7 +1994,14 @@ African Brain Child | Neurosciences Institute | UCT
 :::
 ::: {.takehome-card}
 
-<center><b>07/12/2026</b></center>
+<center><b>07/12/2026</b></center><br><br>
+
+::: {.fragment}
+- Please come with your laptop, with R and RStudio installed
+:::
+::: {.fragment}
+- Please come and see me before then if you get stuck or need help with the installation
+:::
 
 :::
 :::
