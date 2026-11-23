@@ -416,7 +416,7 @@ Prinz, F., Schlange, T. & Asadullah, K. Believe it or not: how much can we rely 
 
 
 ::: {.notes}
-
+Bayer HealthCare - projects within Bayer, where results had already been published. The authors from Bayer went back and tried to replicate these studies in-house.
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -468,7 +468,7 @@ Begley, C., Ellis, L. Raise standards for preclinical cancer research. <em><b>Na
 
 
 ::: {.notes}
-
+Researchers from Amgen looked at 53 landmark papers published in high-impact journals. Replicated 6, and failed to replicate 47. When Amgen could not reproduce the results, they contacted the original authors, discussed the discrepancies, and even repeated the experiments in the original authors' laboratories using the exact same reagents—yet the findings still largely failed to hold up.
 :::
 
 ![](images/image8.png){.absolute top="5" right="40" width="200"}
@@ -590,8 +590,9 @@ African Brain Child | Neurosciences Institute | UCT
 ## >1,500 scientists interviewed
 
 <em><b>Nature</b></em> surveyed 1,576 researchers<br>
-about reproducing or replicating<br>
-their own or other's research
+"Have you tried and FAILED to reproduce<br>
+or replicate someone else's research<br>
+or your own?"
 
 :::: {.columns}
 
@@ -703,7 +704,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## Issues
+## Issues that contribute to the replication crisis
 
 ::: {.fragment}
 ::: {.full-container}
@@ -1738,7 +1739,7 @@ Quarto, Markdown, Typst/LaTeX, Pandoc
 :::
   
 ::: {.fragment}
-::: {.eco-layer data-flow="5"}
+::: {.eco-layer data-flow="2 5"}
 ::: {.eco-q}
 Where does it live, and who sees it?
 :::
