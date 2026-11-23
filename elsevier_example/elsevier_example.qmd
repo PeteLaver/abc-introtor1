@@ -57,8 +57,11 @@ format:
 #| echo: false
 
 mydata <- c(33,70,80,43,81,34,93,47,33,75)
+median_val <- median(mydata)
 
 ```
+
+
 
 
 Please make sure that your manuscript follows the guidelines in the 
