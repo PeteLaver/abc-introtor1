@@ -1807,39 +1807,29 @@ To start, you need only two layers
 {{< mi edit_note size=60px >}}
 :::
 ::: {.takehome-card}
-::: {.fragment}
+
 - https://www.r-project.org/
-:::
-::: {.fragment}
+
 - https://www.rousseeuwprize.org/2026/laureates
-:::
-::: {.fragment}
+
 - https://cran.r-project.org/
-:::
-::: {.fragment}
+
 - https://www.bioconductor.org/
-:::
-::: {.fragment}
+
 - https://posit.co/
-:::
-::: {.fragment}
+
 - https://shiny.posit.co/
-:::
-::: {.fragment}
+
 - https://rmarkdown.rstudio.com/
-:::
-::: {.fragment}
+
 - https://quarto.org/
-:::
-::: {.fragment}
+
 - https://posit.co/products/ide/positron
-:::
-::: {.fragment}
+
 - https://posit.co/products/open-source/rstudio
-:::
-::: {.fragment}
+
 - https://github.com/
-:::
+
 :::
 :::
 :::
@@ -1927,11 +1917,90 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+## Next steps: download and install R
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "75%"
+library(qrcode)
+qr <- qr_code("https://www.r-project.org/")
+plot(qr)
+```
 
 
-## Next steps
 
-...
+<center><a href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer">https://www.r-project.org/</a></center>
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Next steps: download and install RStudio (IDE)
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "75%"
+library(qrcode)
+qr <- qr_code("https://posit.co/products/open-source/rstudio")
+plot(qr)
+```
+
+
+
+<center><a href="https://posit.co/products/open-source/rstudio" target="_blank" rel="noopener noreferrer">https://posit.co/products/open-source/rstudio</a></center>
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
+
+## Next steps: next session
+
+::: {.fragment}
+::: {.center-container}
+::: {.icon-wrapper}
+{{< mi edit_note size=60px >}}
+:::
+::: {.takehome-card}
+
+<center><b>07/12/2026</b></center>
+
+:::
+:::
+:::
 
 ::: {.notes}
 .
@@ -1951,19 +2020,7 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
-## Normal Slide Title
 
-...
-
-::: {.notes}
-These are your speaker notes. They will be hidden during the presentation but will appear in the rendered HTML notes document and when pressing `S` in the reveal.js presentation.
-:::
-
-![](images/image8.png){.absolute top="5" right="40" width="200"}
-
-::: footer
-African Brain Child | Neurosciences Institute | UCT
-:::
 
 
 

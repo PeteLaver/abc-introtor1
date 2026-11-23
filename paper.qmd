@@ -1,0 +1,12 @@
+---
+title: "Introduction to R: Why code?"
+subtitle: "ABC Research Meeting 2026, Cape Town"
+author: "Pete Laver"
+date: today
+
+format:
+  pdf: default
+  elsevier-pdf:
+  # plos-pdf:
+    keep-tex: true
+---
