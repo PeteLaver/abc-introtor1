@@ -1857,6 +1857,75 @@ African Brain Child | Neurosciences Institute | UCT
 
 
 
+## Live presentation
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "75%"
+library(qrcode)
+qr <- qr_code("https://petelaver.github.io/abc-introtor1/")
+plot(qr)
+```
+
+
+
+<center><a href="https://petelaver.github.io/abc-introtor1/" target="_blank" rel="noopener noreferrer">https://petelaver.github.io/abc-introtor1/</a></center>
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+## Public Github repository
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| out-width: "75%"
+library(qrcode)
+qr <- qr_code("https://github.com/PeteLaver/abc-introtor1")
+plot(qr)
+```
+
+
+
+<center><a href="https://github.com/PeteLaver/abc-introtor1" target="_blank" rel="noopener noreferrer">https://github.com/PeteLaver/abc-introtor1</a></center>
+
+
+::: {.notes}
+
+:::
+
+![](images/image8.png){.absolute top="5" right="40" width="200"}
+
+::: footer
+African Brain Child | Neurosciences Institute | UCT
+:::
+
+
+
+
+
+
 
 
 ## Next steps
