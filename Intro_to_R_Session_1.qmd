@@ -1731,7 +1731,7 @@ How does it become a paper or talk?
 **Present**
 :::
 ::: {.eco-tools}
-Quarto, Markdown, Typst/LaTeX, Pandoc
+Quarto, Markdown, Typst/LaTeX, Pandoc, Shiny
 :::
 :::
 :::
@@ -1805,28 +1805,28 @@ To start, you need only two layers
 {{< mi edit_note size=60px >}}
 :::
 ::: {.takehome-card}
+- <b>"Base" R</b>
+  - https://www.r-project.org/
 
-- https://www.r-project.org/
+  - https://www.rousseeuwprize.org/2026/laureates
+- <b>Package repositories</b>
+  - https://cran.r-project.org/
 
-- https://www.rousseeuwprize.org/2026/laureates
+  - https://www.bioconductor.org/
+- <b>Commercial partner</b>
+  - https://posit.co/
+- <b>Presentation layer</b>
+  - https://shiny.posit.co/
 
-- https://cran.r-project.org/
+  - https://rmarkdown.rstudio.com/
 
-- https://www.bioconductor.org/
+  - https://quarto.org/
+- <b>Integrated development environment (IDE)</b>
+  - https://posit.co/products/ide/positron
 
-- https://posit.co/
-
-- https://shiny.posit.co/
-
-- https://rmarkdown.rstudio.com/
-
-- https://quarto.org/
-
-- https://posit.co/products/ide/positron
-
-- https://posit.co/products/open-source/rstudio
-
-- https://github.com/
+  - https://posit.co/products/open-source/rstudio
+- <b>Code sharing and version control</b>
+  - https://github.com/
 
 :::
 :::
