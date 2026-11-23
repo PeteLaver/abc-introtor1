@@ -63,7 +63,7 @@ n_obs <- length(mydata)
 
 ```
 
-
+Our `r n_obs` data points had a median [IQR] of `r median_val` [`r iqr_vals[1]`--`r iqr_vals[2]`].
 
 
 Please make sure that your manuscript follows the guidelines in the 
